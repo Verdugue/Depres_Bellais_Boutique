@@ -1,0 +1,592 @@
+@font-face {
+    font-family: myfont;
+    src: url(/frontend/assets/font/Caveat-VariableFont_wght.ttf);
+  }
+
+.title {
+    font-family: myfont;
+    font-size: 25px;
+}
+
+html {
+  /*background-image:url(/frontend/assets/img/sdlfihds.png);*/
+  background-color: #2C9F86;
+  font-family: myfont;
+  background-size: 100%;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+body {
+	background: #dddddd00;
+	font-size: 15px;
+}
+
+
+
+header {
+    padding-left:-7700px;
+
+}no
+
+#header-top {
+    border-bottom: solid rgba(0, 0, 0, 0.247) 0.01cm ;
+}
+
+#fo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    justify-content: space-around;
+    margin-left:300px;
+   
+
+}
+
+.logo {
+    width: 260%;
+
+}
+
+.logo-boutique {
+    width: 75%;
+   
+    
+}
+
+#logo-site {
+    width: 150px;
+    display: flex;
+    
+    flex-direction: column;
+    
+
+}
+
+#panier {
+    width:20px;
+
+}
+
+#koi-logo  {
+    
+    width: 60%;
+}
+
+#header-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid rgba(0, 0, 0, 0.212) 0.5px ;
+
+}
+
+#papa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+    margin-top: 50px;
+}
+
+#selection {
+    background-color: rgba(61, 61, 61, 0.171);
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width:50%;
+    border-radius: 20px;
+
+}
+
+ .selection-link  {
+    text-decoration: none;
+
+ }
+
+ .selection-fish {
+    background-color: rgba(35, 167, 35, 0.397);
+    width:100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px ;
+    
+ }
+
+ .selection-other  {
+    background-color: rgba(255, 0, 0, 0.315);
+    width:100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px ;
+ }
+
+ .selection-plant {
+    background-color: rgba(0, 0, 243, 0.459);
+    width:100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px ;
+
+ }
+
+ #main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap:100px;
+ }
+
+  #achat-prop {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    background-color: rgba(61, 61, 61, 0.164);
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap:80px;
+    padding: 40px;
+  }
+
+  .caca {
+    display: flex;
+    justify-content: center;
+    
+    gap:50px;
+   
+   
+
+  }
+
+  .article {
+    margin-top: 50px;
+    background-color: white;
+    height:310px;
+    width:250px;
+    border-radius: 20px;
+    
+
+
+  }
+
+.info1{
+    background-color: rgb(255, 255, 255);
+    height:500px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    border-radius: 20px;
+    margin-top:20px;
+
+}
+
+.image-i {
+    width:600px;
+    border-radius: 20px;
+}
+
+#infos {
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    
+    background-image:url(/frontend/assets/img/mangrove.webp);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 130%;
+    padding-inline:10px ;
+}
+
+.info2{
+    background-color: rgb(255, 255, 255);
+    height:500px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    border-radius: 20px;
+}
+
+.text {
+    font-family: myfont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:500px;
+    gap:50px;
+    
+
+}
+
+.text-style {
+    font-size: 20px;
+
+}
+
+.text-h1 {
+    font-size: 40px;
+
+}
+
+#commande {
+  display: flex;
+  gap:300px;
+  align-items: center;
+  align-content: center;
+  height: 500px;
+  margin-bottom: 100px;
+  margin-top: 300px;
+}
+
+#logo-carte {
+  width: 300px;
+  margin-top: -50px;
+}
+
+#logo-colis {
+  width: 300px;
+
+}
+
+#logo-relais {
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.texte {
+  background-color: rgba(128, 128, 128, 0);
+  width:210px;
+  display: flex;
+ text-align: center;
+ font-family: myfont;
+ font-size:26px;
+
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#koi-history{
+  background-color: rgb(49, 49, 49);
+  color:white;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  font-family: myfont;
+  padding-left: 20px;
+}
+
+#koi-history-texte-div {
+ text-align: center;
+ font-family: myfont;
+ width:500px;
+ font-size: 19px;
+
+}
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap:400px;
+  background-color: rgba(116, 0, 0, 0);
+  width:100%;
+  margin-top: -70px;
+}
+
+#footer-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+#middle-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.logo-fb {
+  width:30px;
+
+}
+
+.logo-insta {
+  width:30px;
+  
+}
+
+.logo-pinterest {
+  width:30px;
+  
+}
+
+.logo-tiktok {
+  width:30px;
+  
+}
+
+
+#middle-footer {
+  display: flex;
+  
+}
+
+#test {
+  display: flex;
+  gap:20px;
+  
+}
+
+
+
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+
+}
+
+.logo-boutique {
+  width:100px;
+  
+}
+
+#sub   {
+  
+  z-index:5000;
+
+}
+
+#eng {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+
+}
+
+.logo-padi {
+  width:50px;
+
+}
+
+.logo-wwf {
+  width:55px;
+
+}
+
+.logo-sea {
+  width:90px;
+
+}
+
+#logo-footer {
+  display: flex;
+  gap:20px;
+} 
+
+#footer-left {
+  align-content: center;
+}
+
+#info {
+  font-size: 30px;
+  font-family: myfont;
+
+}
+
+#condition {
+  font-family: myfont;
+  text-decoration:none;
+  color:rgba(240, 240, 240, 0.89);
+  font-size: 25px;
+
+}
+
+#conditions {
+  font-family: myfont;
+  text-decoration:none;
+  color:rgba(240, 240, 240, 0.89);
+  font-size: 25px;
+
+}
+
+#conditions:hover {
+  color:black;
+}
+
+#sd {
+
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+
+}
+
+#input {
+  width:100px;
+  background-color: rgb(255, 255, 255);
+  z-index: 10000;
+  width:200px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  
+}
+
+#subscribe {
+  margin-right: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+
+ #label {
+  font-size: 20px;
+
+ }
+
+#engagement {
+  font-size: 30px;
+
+}
+
+#inputs {
+  display:flex ;
+ gap:5px;
+ margin-left: 40px;
+
+}
+
+#input-image {
+  width:30px;
+
+}
+
+.article-image {
+    width: 60%;
+    height: 40%;
+    border-radius: 20px;
+}
+
+#article {
+    
+    width: 96%;
+    
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#nom {
+    font-size: 70px;
+    font-family: myfont;
+}
+
+#img-tox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#prix-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    font-size: 50px;
+    margin-right: 10%;
+    border: solid black 4px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#selecteur{
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: none;
+    background-color: white;
+    width: 5%;
+    height: 60px;
+    font-size: 20px;
+}
+
+#basket {
+    width: 5%;
+}
+
+#quantity{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 30px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+#desc-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 40px;
+    
+}
+
+#question{
+    width: 30%;
+}
+
+#globe{
+    width: 30%;
+}
+
+#origine-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 40px;
+}
+
+#elevage-box{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 40px;
+}
+
+#star{
+    width: 100%;
+}

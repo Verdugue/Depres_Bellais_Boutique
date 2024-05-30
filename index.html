@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>                                                                                            
+    <head>
+        <link rel="stylesheet" href="/frontend/assets/css/main.css">
+        <title>Koi BOutique</title>
+        <script src="frontend/js/main.js"></script>
+    </head>
+<body>
+    <header>
+        <div id="header-top">
+            <div id="fo">
+    
+                <div id="search">
+                    <div id="inputs">
+                        <div>
+                            <input type="text" id="input"/>
+                        </div>
+                        <div>
+                            <a href="/"><img id="input-image" src="frontend/assets/img/searcg.png"></a>
+                        </div>
+                        
+                    </div>
+            </div> 
+            <div id="logo-site">
+                    <a id="aaa" href="/"><img class="logo-boutique1" src="frontend/assets/img/koi.png"></a>
+                    <p class="title">Koi boutique</p>
+    
+            </div>
+            <div id="panier">
+                    <img class="logo" src="frontend/assets/img/shopping.png" href="."><img id="panier-logo" src=""></a>
+            </div>
+                <div id="koi-gif">
+                    <img>
+                </div>
+            </div>
+    
+    
+        
+    
+        </div>
+        <div id="header-bottom">
+            <img id="koi-logo" src="frontend/assets/img/koi.gif">
+    
+        </div>
+
+        <script>
+            document.addEventListener('scroll', function() {
+                const koiLogo = document.getElementById('koi-logo');
+                const headerBottom = document.getElementById('header-bottom');
+                const scrollTop = window.scrollY;
+                const newWidth = 60 - scrollTop / 5; // Ajustez les valeurs selon vos besoins
+        
+                if (newWidth > 20) {
+                    koiLogo.style.width = newWidth + '%';
+                    koiLogo.style.opacity = 1; // Rendre l'image complètement visible
+                    headerBottom.style.opacity = 1; // Rendre la ligne complètement visible
+                } else {
+                    koiLogo.style.width = '20%'; // Fixer la largeur minimale
+                    koiLogo.style.opacity = 0; // Masquer l'image
+                    headerBottom.style.opacity = 0; // Masquer la ligne
+                }
+            });
+        </script>
+        
+        
+        
+        
+    </header>
+    <div id="main-container">
+        <div id="papa">
+            <div id="selection">
+                <a href="/" class="selection-link">
+                <div class="selection-plant">
+                    
+                    <p class="selection-text">Plant's</p>
+                    
+                </div>
+                 </a>
+
+                <a href="/" class="selection-link">
+                <div class="selection-fish">
+                   
+                        <p class="selection-text">Fish's</p>
+                    
+                </div>
+                 </a>
+
+                <a href="/" class="selection-link">
+                <div class="selection-other">
+                    
+                        <p class="selection-text">Other's</p>
+                    
+                </div>
+                </a>
+
+
+            </div>
+            <div id="achat-prop">
+                
+            </div>
+
+
+        </div>
+        <div id="infos">
+            <div class="info1">
+                <div class="image-info">
+                    <img class="image-i" src="frontend/assets/img/aquarium.jpg">
+                </div>
+                <div class="text">
+                    <h1 class="text-h1"> Aquarium achetable.</h1>
+                    <p class="text-style">
+                        Un aquarium doté d’un équipement complet pour découvrir l’aquariophilie en toute confiance, équipé d’une pompe à eau, d'un chauffage, d'une pré-installation pour une pompe à air et d’un filtre biologique.La FOAM (mousse) de 30PPI et le Filtre CF80 Ciano® assure un renouvellement optimal de l’eau et le parfait maintien de l’équilibre aquatique, la dose WATER CLEAR Ciano® rend l’eau cristalline et élimine les odeurs.
+                    </p>
+
+                </div>
+
+                
+            </div>
+            <div class="info2">
+                <div class="text">
+                    <h1 class="text-h1"> Aquarium & poisson 
+                        a la maison</h1>
+                    <p class="text-style">
+                        Prendre soin d'un aquarium enseigne aux enfants la responsabilité. Ils apprennent l'importance de maintenir un environnement propre et sain pour leurs poissons, en nourrissant régulièrement les animaux et en vérifiant l'eau. Ces activités aident à développer des habitudes de discipline et de soin chez les jeunes esprits.
+                    </p>
+
+                </div>
+                <div class="image-info">
+                    <img class="image-i" src="frontend/assets/img/father.jpg">
+                </div>
+            </div>
+
+        </div>
+        <div id="commande">
+            <div class="category">
+                <div id="colis">
+                    <img src="/frontend/assets/img/colis.png" id="logo-colis">
+                </div>
+                <div class="text-commande">
+                    <p class="texte">Livraison offerte à partir de 120€ d’achat en France / hors carte cadeau</p>
+
+
+                </div>
+
+            </div>
+            <div class="category">
+                <div id="carte">
+                    <img src="/frontend/assets/img/bancaire.png" id="logo-carte">
+                </div>
+                <div class="text-commande">
+                    <p class="texte">Paiement sécurisé via CB, Chèque, Virement</p>
+
+                </div>
+
+            </div>
+            <div class="category">
+                <div id="relais">
+                    <img src="/frontend/assets/img/relais.jpg" id="logo-relais">
+                </div>
+                <div class="text-commande">
+                    <p class="texte">Livraison en points relais avec DPD</p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const commande = document.getElementById('commande');
+        
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            commande.classList.add('slide-in');
+                            commande.classList.remove('slide-out');
+                        } else {
+                            commande.classList.remove('slide-in');
+                            commande.classList.add('slide-out');
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+        
+                observer.observe(commande);
+            });
+        </script>
+
+
+        <div id="koi-history">
+            <div class="koi">
+                <h1 id="koi-history-title">histoire DE Koi Boutique</p>
+            </div>
+            <div id="koi-history-texte-div">
+                <p id="koi-history-texte">Le concept est né d’une envie profonde de Nathalie,
+                    celle de partager avec une communauté son goût pour le Prêt-à-porter,
+                    partager son style unique en dehors des conventions et des dictâtes de la mode,
+                    un style à la fois boho-rock qui s’adapterait à une femme libre,
+                    un brin nonchalante dans un esprit grunge. Grungemama voit le jour en 2015,
+                    pour commencer il ne s’agissait que d’une page marchande sur Facebook,
+                    Nathalie à l’époque préparait ses colis par ses propres moyens et faisait ses photos dans son propre salon, 
+                    au fil des mois et de l’engouement grandissant, elle s’est dit qu’ouvrir une petite boutique dans Toulouse était une belle opportunité et 
+                    qu’au pire si les clientes n’étaient pas au rendez-vous cela lui servirait de bureau, ça n’a pas été le cas… 
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-left">
+                <div id="info">
+                        <p id="infoo">Information</p> 
+                        <p>générales</p>
+                </div>
+                <div id="sd">
+                    <div>
+                        <a href="/" id="conditions">Livraison</a>
+                    </div>
+                    <div>
+                        <a href="/" id="conditions">Mention légales</a>
+                    </div>
+                    <div>   
+                        <a href="/" id="conditions">Conditions générales d'utilisation</a>
+                    </div>
+                    <div>
+                        <a href="/" id="conditions">Condition de retour</a>
+                    </div>
+                    <div>
+                        <a href="/" id="conditions">Contact</a>
+                    </div>
+                    <div>
+                        <a href="/" id="conditions">Parametre de cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-middle">
+                <div id="middle-top">
+                    <a  id ="aaaa" href="/"><img class="logo-boutique" src="frontend/assets/img/koi.png"></a>
+                    <p class="title">Koi boutique</p>
+                </div>
+                <div id="middle-bottom">
+                    <div>
+                        <p id="suivez">Suivez nous !!!</p>
+                    </div>
+                    <div id="test">
+                        <div>   
+                            <a href="/" id="condition"><img class="logo-fb" src="frontend/assets/img/fb.png"></a>
+                        </div>
+                        <div>
+                            <a href="/" id="condition"><img class="logo-insta" src="frontend/assets/img/insta.png"></a>
+                        </div>
+                        <div>
+                            <a href="/" id="condition"><img class="logo-pinterest" src="frontend/assets/img/pinterest.png"></a>
+                        </div>
+                        <div>
+                            <a href="/" id="condition"><img class="logo-tiktok" src="frontend/assets/img/tiktok.png"></a>
+                        </div>
+                    </div>
+                
+                    
+
+                </div>
+            </div>
+            <div id="footer-right">
+                <div id="eng">
+                    <div id="engagement">
+                        <p>Nos engagements</p>
+                    </div>
+                    <div id="logo-footer">
+                        <div>   
+                            <a href="https://www.padi.com/fr" id="condition"><img class="logo-padi" src="frontend/assets/img/padi.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.wwf.fr/" id="condition"><img class="logo-wwf" src="frontend/assets/img/wwf.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://seashepherd.fr/" id="condition"><img class="logo-sea" src="frontend/assets/img/sea.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="subscribe">
+                    <div>
+                        <label id="label"" for="sub">Abonnez-vous a la newletter :</label>
+                    </div>
+                    <div id="inputs">
+                        <div>
+                            <input type="text" id="input"/>
+                        </div>
+                        <div>
+                            <a href="/"><img id="input-image" src="frontend/assets/img/searcg.png"></a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    
+
+
+
+
+
+</body>
+
+
+
+</html>
