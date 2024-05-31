@@ -6,12 +6,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
-
+  #koi-logo {
+    width: 60%;
+    transition: width 0.3s, opacity 0.3s; /* Transition pour la largeur et l'opacité */
+  }
 
 .title {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
     font-size: 25px;
 }
@@ -21,9 +24,8 @@ html {
   background-color: #1ea0dd;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: weight;
   font-style: normal;
-  
   background-size: 100%;
 
 }

@@ -87,6 +87,8 @@ header {
 }
 
 
+
+
 #papa {
     display: flex;
     flex-direction: column;
@@ -532,12 +534,53 @@ header {
   color:black;
 }
 
-#sd {
 
+#sd {
   display: flex;
   flex-direction: column;
-  gap:10px;
+}
 
+#sd > div {
+  position: relative;
+  margin: 10px 0;
+}
+
+.conditions {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.conditions::before,
+.conditions::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: black;
+  width: 0;
+  bottom: 0;
+  transition: width 0.4s ease;
+}
+
+.conditions::before {
+  left: 50%;
+}
+
+.conditions::after {
+  right:0%;
+}
+
+.conditions:hover {
+  color:rgba(0, 0, 0, 0.403);
+}
+
+.conditions:hover::before,
+.conditions:hover::after {
+  width: 50%;
+  left: 0;
+  right: 0;
 }
 
 #input {

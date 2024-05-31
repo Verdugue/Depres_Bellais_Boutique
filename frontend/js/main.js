@@ -88,8 +88,8 @@ function displayPoissonDetails(poisson) {
     document.getElementById('nom').textContent = poisson.species;
     document.getElementById('poisson-image').src = `frontend/assets/img/${poisson.image_path}`;
     document.getElementById('prix').textContent = `Prix : ${poisson.price}€/u`;
-    document.getElementById('quantite').textContent = `Stock : ${poisson.stock}`;
-    document.getElementById('elevage').textContent = `Élevage : ${poisson.farming}`;
-    document.getElementById('origine').textContent = `Origine : ${poisson.origine}`;
+    document.getElementById('quantite').textContent = ` ${poisson.stock}`;
+    document.getElementById('elevage').textContent = ` ${poisson.elevage}`;
+    document.getElementById('origine').textContent = ` ${poisson.origine}`;
     document.getElementById('desc').textContent = poisson.description;
 }
