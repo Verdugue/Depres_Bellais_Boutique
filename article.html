@@ -27,7 +27,9 @@
     
             </div>
             <div id="panier">
-                    <img class="logo" src="frontend/assets/img/shopping.png" href="."><img id="panier-logo" src=""></a>
+                <a href="/panier.html">
+                    <img class="logo" src="frontend/assets/img/shopping.png" href="."><img id="panier-logo" src="">
+                </a>
             </div>
                 <div id="koi-gif">
                     <img>
@@ -42,6 +44,24 @@
             <img id="koi-logo" src="frontend/assets/img/koi.gif">
     
         </div>
+        <script>
+            document.addEventListener('scroll', function() {
+                const koiLogo = document.getElementById('koi-logo');
+                const headerBottom = document.getElementById('header-bottom');
+                const scrollTop = window.scrollY;
+                const newWidth = 60 - scrollTop / 5; // Ajustez les valeurs selon vos besoins
+        
+                if (newWidth > 20) {
+                    koiLogo.style.width = newWidth + '%';
+                    koiLogo.style.opacity = 1; // Rendre l'image complètement visible
+                    headerBottom.style.opacity = 1; // Rendre la ligne complètement visible
+                } else {
+                    koiLogo.style.width = '20%'; // Fixer la largeur minimale
+                    koiLogo.style.opacity = 0; // Masquer l'image
+                    headerBottom.style.opacity = 0; // Masquer la ligne
+                }
+            });
+        </script>
     </header>
     <div id="big">
         <div id="main-container">
@@ -77,26 +97,27 @@
                     <div id="article">
                         <p id="nom">Neo Cardina "blue velvet"</p>
                         <div id="img-tox">
-                            
                             <img class="article-image" id="poisson-image" src="">
                             <div id="prix-box">
                                 <p id="prix">Prix : </p>
                                 <p id="quantite">Stock : </p>
-                                    <div id="quantity">
+                                <div id="quantity">
                                     <select name="select_quantity" id="selecteur">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
-                                        <option value="1">5</option>
-                                        <option value="2">6</option>
-                                        <option value="3">7</option>
-                                        <option value="4">8</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
                                     </select>
-                                    <img id="basket" src="frontend/assets/img/basket-removebg-preview.png">
+                                    <button id="add-to-cart-btn">Ajouter au panier</button>
                                 </div>
                             </div>
                         </div>
+                        
+                        
                         <div id="desc-box">
                             <p id="desc">
                             </p>
@@ -154,10 +175,10 @@
                     </div>
                     <div class="text-commande">
                         <p class="texte">Livraison offerte à partir de 120€ d’achat en France / hors carte cadeau</p>
-
-
+    
+    
                     </div>
-
+    
                 </div>
                 <div class="category">
                     <div id="carte">
@@ -165,9 +186,9 @@
                     </div>
                     <div class="text-commande">
                         <p class="texte">Paiement sécurisé via CB, Chèque, Virement</p>
-
+    
                     </div>
-
+    
                 </div>
                 <div class="category">
                     <div id="relais">
@@ -175,13 +196,34 @@
                     </div>
                     <div class="text-commande">
                         <p class="texte">Livraison en points relais avec DPD</p>
-
-
+    
+    
                     </div>
-
+    
                 </div>
-
+    
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const commande = document.getElementById('commande');
+            
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                commande.classList.add('slide-in');
+                                commande.classList.remove('slide-out');
+                            } else {
+                                commande.classList.remove('slide-in');
+                                commande.classList.add('slide-out');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1
+                    });
+            
+                    observer.observe(commande);
+                });
+            </script>
             <div id="koi-history">
                 <div class="koi">
                     <h1 id="koi-history-title">histoire DE Koi Boutique</p>

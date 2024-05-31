@@ -13,6 +13,28 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+#commande {
+    display: flex;
+    gap:300px;
+    align-items: center;
+    align-content: center;
+    height: 500px;
+    margin-bottom: 100px;
+    margin-top: 300px;
+    opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  #commande.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  #commande.slide-out {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 
 /* Style pour la carte de produit */
 .card {

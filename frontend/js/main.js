@@ -20,21 +20,31 @@ document.addEventListener('DOMContentLoaded', function() {
         if (poissonId) {
             fetch(`http://localhost:3000/api/poissons/${poissonId}`)
                 .then(response => response.json())
-                .then(poisson => displayPoissonDetails(poisson))
+                .then(poisson => {
+                    displayPoissonDetails(poisson);
+                    document.getElementById('add-to-cart-btn').setAttribute('data-id', poissonId);
+                })
                 .catch(error => console.error('Erreur lors de la récupération des données du poisson:', error));
         }
-    }
 
-    document.addEventListener('click', function(event) {
-        if (event.target.classList.contains('add-to-cart-btn')) {
-            event.preventDefault(); // Empêche le comportement par défaut du bouton
+        document.getElementById('selecteur').addEventListener('change', function() {
+            const quantity = parseInt(this.value);
+            const price = parseFloat(document.getElementById('prix').getAttribute('data-price'));
+            const totalPrice = (price * quantity).toFixed(2);
+            document.getElementById('prix').textContent = `Prix total : ${totalPrice}€`;
+        });
+
+        document.getElementById('add-to-cart-btn').addEventListener('click', function(event) {
+            event.preventDefault();
             const poissonId = event.target.getAttribute('data-id');
+            const quantity = parseInt(document.getElementById('selecteur').value);
+
             fetch(`http://localhost:3000/api/poissons/${poissonId}`)
                 .then(response => response.json())
-                .then(poisson => addToCart(poisson))
+                .then(poisson => addToCart(poisson, quantity))
                 .catch(error => console.error('Erreur lors de la récupération des données du poisson:', error));
-        }
-    });
+        });
+    }
 });
 
 function displayPoissons(poissons) {
@@ -63,23 +73,33 @@ function createCard(poisson) {
     return card;
 }
 
-function addToCart(poisson) {
+function addToCart(poisson, quantity) {
+    if (!poisson.id_animals || !poisson.species || isNaN(parseFloat(poisson.price)) || isNaN(parseInt(poisson.stock))) {
+        console.error('Données de poisson incomplètes lors de l\'ajout au panier:', poisson);
+        return;
+    }
+
     let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+    const price = parseFloat(poisson.price); // Convertir le prix en nombre
+
     if (cart[poisson.id_animals]) {
-        cart[poisson.id_animals].quantity += 1;
-    } else {
-        if (poisson.id_animals && poisson.species && typeof poisson.price === 'number') {
-            cart[poisson.id_animals] = {
-                id: poisson.id_animals,
-                species: poisson.species,
-                price: poisson.price,
-                quantity: 1
-            };
+        if ((cart[poisson.id_animals].quantity + quantity) <= poisson.stock) {
+            cart[poisson.id_animals].quantity += quantity;
         } else {
-            console.error('Données de poisson incomplètes lors de l\'ajout au panier:', poisson);
+            alert("Stock insuffisant pour cet article.");
             return;
         }
+    } else {
+        cart[poisson.id_animals] = {
+            id: poisson.id_animals,
+            species: poisson.species,
+            price: price,
+            quantity: quantity,
+            stock: poisson.stock
+        };
     }
+
     localStorage.setItem('cart', JSON.stringify(cart));
     console.log("Article ajouté au panier :", cart[poisson.id_animals]);
 }
@@ -88,7 +108,8 @@ function displayPoissonDetails(poisson) {
     document.getElementById('nom').textContent = poisson.species;
     document.getElementById('poisson-image').src = `frontend/assets/img/${poisson.image_path}`;
     document.getElementById('prix').textContent = `Prix : ${poisson.price}€/u`;
-    document.getElementById('quantite').textContent = ` ${poisson.stock}`;
+    document.getElementById('prix').setAttribute('data-price', poisson.price);
+    document.getElementById('quantite').textContent = `En Stock : ${poisson.stock}`;
     document.getElementById('elevage').textContent = ` ${poisson.elevage}`;
     document.getElementById('origine').textContent = ` ${poisson.origine}`;
     document.getElementById('desc').textContent = poisson.description;

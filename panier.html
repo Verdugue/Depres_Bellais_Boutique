@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Panier</title>
-        <link rel="stylesheet" href="/frontend/assets/css/style.css">
-        <script src="/frontend/js/cart.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link rel="stylesheet" href="/frontend/assets/css/panier.css">
+</head>
 <body>
-
-<h1>Panier</h1>
-
-<div id="cart-items">
-    <!-- Les articles du panier seront affichés ici -->
-</div>
-
-
-
+    <div id="main-container">
+        <h1>Mon Panier</h1>
+        <div id="cart-items"></div>
+        <div id="total">
+            <p id="total-price">Total: 0.00€</p>
+        </div>
+    </div>
+    <script src="/frontend/js/cart.js"></script>
 </body>
 </html>
