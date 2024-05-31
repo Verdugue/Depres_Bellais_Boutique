@@ -3,15 +3,27 @@
     src: url(/frontend/assets/font/Caveat-VariableFont_wght.ttf);
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+
 .title {
-    font-family: myfont;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
     font-size: 25px;
 }
 
 html {
   /*background-image:url(/frontend/assets/img/sdlfihds.png);*/
-  background-color: #2C9F86;
-  font-family: myfont;
+  background-color: #1ea0dd;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  
   background-size: 100%;
 
 }
@@ -22,17 +34,24 @@ html {
 body {
 	background: #dddddd00;
 	font-size: 15px;
+  
 }
+
 
 
 
 header {
     padding-left:-7700px;
 
-}no
+}
 
 #header-top {
     border-bottom: solid rgba(0, 0, 0, 0.247) 0.01cm ;
+}
+
+#big{
+  display: flex;
+  justify-content:center;
 }
 
 #fo {
@@ -51,9 +70,7 @@ header {
 }
 
 .logo-boutique {
-    width: 75%;
-   
-    
+    width: 75%; 
 }
 
 #logo-site {
@@ -89,6 +106,7 @@ header {
     align-items: center;
     gap:50px;
     margin-top: 50px;
+    width: 80%;
 }
 
 #selection {
@@ -142,15 +160,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin-top: 20px;
     gap:100px;
+    width: 100%;
  }
 
   #achat-prop {
     height: 100%;
     width: 90%;
     display: flex;
-    background-color: rgba(61, 61, 61, 0.164);
+    background-color: rgb(241, 235, 235);
     border-radius: 20px;
     justify-content: center;
     flex-direction: column;
@@ -203,8 +223,6 @@ header {
     flex-direction: column;
     width:100%;
     align-items: center;
-    
-    background-image:url(/frontend/assets/img/mangrove.webp);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 130%;
@@ -223,7 +241,7 @@ header {
 }
 
 .text {
-    font-family: myfont;
+    font-family: "Roboto Mono", monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,7 +292,7 @@ header {
   width:210px;
   display: flex;
  text-align: center;
- font-family: myfont;
+ font-family: "Roboto Mono", monospace;
  font-size:26px;
 
 }
@@ -289,18 +307,18 @@ header {
 #koi-history{
   background-color: rgb(49, 49, 49);
   color:white;
-  height:400px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   width:100%;
-  font-family: myfont;
+  font-family: "Roboto Mono", monospace;
   padding-left: 20px;
 }
 
 #koi-history-texte-div {
  text-align: center;
- font-family: myfont;
+ font-family: "Roboto Mono", monospace;
  width:500px;
  font-size: 19px;
 
@@ -414,12 +432,12 @@ header {
 
 #info {
   font-size: 30px;
-  font-family: myfont;
+  font-family: "Roboto Mono", monospace;
 
 }
 
 #condition {
-  font-family: myfont;
+  font-family: "Roboto Mono", monospace;
   text-decoration:none;
   color:rgba(240, 240, 240, 0.89);
   font-size: 25px;
@@ -489,9 +507,10 @@ header {
 }
 
 .article-image {
-    width: 60%;
-    height: 40%;
+    width: 40%;
+    height: 20%;
     border-radius: 20px;
+    
 }
 
 #article {
@@ -503,8 +522,12 @@ header {
 }
 
 #nom {
-    font-size: 70px;
-    font-family: myfont;
+    font-size: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    text-shadow: 5px 8px 14px #000000;
 }
 
 #img-tox{
@@ -519,25 +542,28 @@ header {
     flex-direction: column;
     align-items: center;
     gap:20px;
-    font-size: 50px;
+    font-size: 20px;
     margin-right: 10%;
     border: solid black 4px;
     border-radius: 20px;
     padding: 30px;
+    box-shadow: 8px 5px 10px rgb(62, 60, 60);
+    width: 15%;
 }
 
 #selecteur{
     border-radius: 10px;
     text-decoration: none;
-    box-shadow: none;
-    background-color: white;
-    width: 5%;
+    box-shadow: 8px 5px 10px rgb(62, 60, 60);
+    background-color: rgb(242, 234, 234);
+    border: solid black 1px;
+    width: 30%;
     height: 60px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #basket {
-    width: 5%;
+    width: 30%;
 }
 
 #quantity{
@@ -545,10 +571,10 @@ header {
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    justify-content:flex-start;
-    padding: 30px;
-    margin-left: 60px;
-    margin-top: 40px;
+    justify-content:center;
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 #desc-box{
@@ -557,16 +583,16 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    font-size: 40px;
-    
+    font-size: 18px;
+    margin-top: 3vh;
 }
 
 #question{
-    width: 30%;
+    width: 35%;
 }
 
 #globe{
-    width: 30%;
+    width: 20%;
 }
 
 #origine-box{
@@ -575,7 +601,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    font-size: 40px;
+    font-size: 18px;
 }
 
 #elevage-box{
@@ -584,9 +610,9 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    font-size: 40px;
+    font-size: 18px;
 }
 
 #star{
-    width: 100%;
+    width: 20%;
 }
