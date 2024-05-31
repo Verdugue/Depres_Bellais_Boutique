@@ -35,15 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 .catch(error => console.error('Erreur lors de la récupération des données du poisson:', error));
         }
     });
-    
 });
 
 function displayPoissons(poissons) {
     const container = document.getElementById('achat-prop');
     container.innerHTML = ''; // Clear previous content
-    console.log(poissons); // Affiche les données pour le débogage
     poissons.forEach(poisson => {
-        console.log(poisson); // Vérifier chaque poisson
         const card = createCard(poisson);
         container.appendChild(card);
     });
@@ -54,7 +51,7 @@ function createCard(poisson) {
     card.className = 'card';
     card.innerHTML = `
         <a id="lien" href="/article.html?id=${poisson.id_animals}">
-            <img src="/frontend/assets/img/${poisson.image_path}" alt="${poisson.species}" class="card-img-top">
+            <img src="frontend/assets/img/${poisson.image_path}" alt="${poisson.species}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">${poisson.species}</h5>
                 <p class="card-text">${poisson.description}</p>
@@ -71,7 +68,6 @@ function addToCart(poisson) {
     if (cart[poisson.id_animals]) {
         cart[poisson.id_animals].quantity += 1;
     } else {
-        // Assurez-vous que les propriétés comme id, species, price existent
         if (poisson.id_animals && poisson.species && typeof poisson.price === 'number') {
             cart[poisson.id_animals] = {
                 id: poisson.id_animals,
@@ -85,19 +81,15 @@ function addToCart(poisson) {
         }
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCart();
+    console.log("Article ajouté au panier :", cart[poisson.id_animals]);
 }
-
-
-
-
 
 function displayPoissonDetails(poisson) {
     document.getElementById('nom').textContent = poisson.species;
     document.getElementById('poisson-image').src = `frontend/assets/img/${poisson.image_path}`;
     document.getElementById('prix').textContent = `Prix : ${poisson.price}€/u`;
     document.getElementById('quantite').textContent = `Stock : ${poisson.stock}`;
-    document.getElementById('elevage').textContent = `élevage : ${poisson.farming}`;
-    document.getElementById('origine').textContent = `origine : ${poisson.origine}`;
+    document.getElementById('elevage').textContent = `Élevage : ${poisson.farming}`;
+    document.getElementById('origine').textContent = `Origine : ${poisson.origine}`;
     document.getElementById('desc').textContent = poisson.description;
 }
