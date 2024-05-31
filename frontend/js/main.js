@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 .catch(error => console.error('Erreur lors de la récupération des données du poisson:', error));
         }
     }
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('add-to-cart-btn')) {
+            event.preventDefault(); // Empêche le comportement par défaut du bouton
+            const poissonId = event.target.getAttribute('data-id');
+            fetch(`http://localhost:3000/api/poissons/${poissonId}`)
+                .then(response => response.json())
+                .then(poisson => addToCart(poisson))
+                .catch(error => console.error('Erreur lors de la récupération des données du poisson:', error));
+        }
+    });
+    
 });
 
 function displayPoissons(poissons) {
@@ -47,17 +59,45 @@ function createCard(poisson) {
                 <h5 class="card-title">${poisson.species}</h5>
                 <p class="card-text">${poisson.description}</p>
                 <p class="list-group-item">${poisson.price}€</p>
+                <button class="add-to-cart-btn" data-id="${poisson.id_animals}">Ajouter au panier</button>
             </div>
         </a>
     `;
     return card;
 }
 
+function addToCart(poisson) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || {};
+    if (cart[poisson.id_animals]) {
+        cart[poisson.id_animals].quantity += 1;
+    } else {
+        // Assurez-vous que les propriétés comme id, species, price existent
+        if (poisson.id_animals && poisson.species && typeof poisson.price === 'number') {
+            cart[poisson.id_animals] = {
+                id: poisson.id_animals,
+                species: poisson.species,
+                price: poisson.price,
+                quantity: 1
+            };
+        } else {
+            console.error('Données de poisson incomplètes lors de l\'ajout au panier:', poisson);
+            return;
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+}
+
+
+
+
+
 function displayPoissonDetails(poisson) {
     document.getElementById('nom').textContent = poisson.species;
     document.getElementById('poisson-image').src = `frontend/assets/img/${poisson.image_path}`;
     document.getElementById('prix').textContent = `Prix : ${poisson.price}€/u`;
     document.getElementById('quantite').textContent = `Stock : ${poisson.stock}`;
+    document.getElementById('elevage').textContent = `élevage : ${poisson.farming}`;
+    document.getElementById('origine').textContent = `origine : ${poisson.origine}`;
     document.getElementById('desc').textContent = poisson.description;
-    // Ajoutez d'autres champs si nécessaire
 }

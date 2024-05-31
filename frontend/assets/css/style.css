@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Style pour l'en-tête */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style pour la carte de produit */
+.card {
+    width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.card-text {
+    color: #666;
+}
+
+.list-group-item {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Style pour le bouton Ajouter au panier */
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour le bouton Retirer du panier */
+.remove-from-cart-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-from-cart-btn:hover {
+    background-color: #c82333;
+}
