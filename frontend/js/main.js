@@ -61,20 +61,32 @@ function createCard(poisson) {
     card.className = 'card';
     card.innerHTML = `
         <a id="lien" href="/article.html?id=${poisson.id_animals}">
-            <img src="frontend/assets/img/${poisson.image_path}" alt="${poisson.species}" class="card-img-top">
+            <div class="card-top">
+                <img src="frontend/assets/img/${poisson.image_path}" alt="${poisson.species}" class="card-img-top">
+            </div>
             <div class="card-body">
-                <h5 class="card-title">${poisson.species}</h5>
-                <p class="card-text">${poisson.description}</p>
-                <p class="list-group-item">${poisson.price}€</p>
-                <button class="add-to-cart-btn" data-id="${poisson.id_animals}">Ajouter au panier</button>
+                <div id="left-commande">
+                    <div class="text-commande">
+                        <h5 class="card-title">${poisson.species}</h5>
+                    </div>
+                </div>
+                <div id="right-commande">
+      a              <div class="text-commande">
+                        <p class="card-text">${poisson.description}</p>
+                    </div>
+                    <div class="text-commande">
+                        <p class="list-group-item">${poisson.price}€</p>
+                    </div>
+                </div>
             </div>
         </a>
     `;
     return card;
 }
 
+
 function addToCart(poisson, quantity) {
-    if (!poisson.id_animals || !poisson.species || isNaN(parseFloat(poisson.price)) || isNaN(parseInt(poisson.stock))) {
+    if (!poisson.id_animals || !poisson.species || isNaN(parseFloat(poisson.price)) || isNaN(parseInt(poisson.stock)) || !poisson.image_path) {
         console.error('Données de poisson incomplètes lors de l\'ajout au panier:', poisson);
         return;
     }
@@ -96,13 +108,15 @@ function addToCart(poisson, quantity) {
             species: poisson.species,
             price: price,
             quantity: quantity,
-            stock: poisson.stock
+            stock: poisson.stock,
+            image_path: poisson.image_path // Assurez-vous de passer cette propriété
         };
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     console.log("Article ajouté au panier :", cart[poisson.id_animals]);
 }
+
 
 function displayPoissonDetails(poisson) {
     document.getElementById('nom').textContent = poisson.species;

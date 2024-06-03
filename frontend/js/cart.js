@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gestion du retrait du panier
     cartItems.addEventListener('click', function(event) {
-        if (event.target.classList.contains('remove-from-cart-btn')) {
+        if (event.target.classList.contains('trash')) {
             const poissonId = event.target.getAttribute('data-id');
             removeFromCart(poissonId);
             event.target.parentElement.remove(); // Retire l'élément de l'interface utilisateur
@@ -32,16 +32,34 @@ function displayCart() {
 function createCartItemElement(item) {
     const itemElement = document.createElement('div');
     itemElement.className = 'cart-item';
-    if (item.species && !isNaN(item.quantity) && !isNaN(item.price)) {
+    if (item.species && !isNaN(item.quantity) && !isNaN(item.price) && item.image_path) {
         itemElement.innerHTML = `
-            <p>${item.species} - Quantité: ${item.quantity} - Prix total: ${(item.price * item.quantity).toFixed(2)}€</p>
-            <button class="remove-from-cart-btn" data-id="${item.id}">Retirer du panier</button>
+        <div class="cart-item-details">
+            <div id="left-commande">
+                <img src="frontend/assets/img/${item.image_path}" alt="${item.species}" class="item-image">
+                <span class="item-name">${item.species}</span>
+            </div>
+            <div id="right-commande">
+                <div>
+                    <span class="item-quantity">${item.quantity}</span>
+                </div>
+                <div>
+                <button class="trash" data-id="${item.id}"><img id="jequittetrash"src="/frontend/assets/img/trash.png"> </button>
+                </div>
+                <div>
+                    <span class="item-total-price">${(item.price * item.quantity).toFixed(2)}€</span>
+                </div>
+            </div>
+        </div>
+        
         `;
     } else {
         itemElement.innerHTML = `<p>Informations sur l'article manquantes ou incorrectes.</p>`;
     }
     return itemElement;
 }
+
+
 
 function removeFromCart(poissonId) {
     const cart = JSON.parse(localStorage.getItem('cart'));

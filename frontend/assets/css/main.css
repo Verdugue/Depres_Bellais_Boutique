@@ -636,6 +636,11 @@ header {
 }
 
 
+.card-img-top {
+  width:10px;
+}
+
+
 .card-title {
   font-size: 17px;
   display: flex;
