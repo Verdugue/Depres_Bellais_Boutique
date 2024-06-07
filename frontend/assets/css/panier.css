@@ -1,9 +1,15 @@
 /* styles.css */
 
+@font-face {
+    font-family: myfont;
+    src: url(/frontend/assets/font/RobotoMono-VariableFont_wght.ttf);
+  }
+
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: myfont;
     background-color: #87CEFA;
 }
 
@@ -12,6 +18,13 @@ body, html {
     align-items: center;
     padding: 20px;
     color: #333;
+}
+
+#promo-code {
+    width:300px;
+    border-radius: 20px;
+    padding:10px;
+    font-size:20px;
 }
 
 .container {
@@ -41,24 +54,54 @@ body, html {
     background-color: #0056b3;
 }
 
-.cart-items th, .cart-items td {
-    padding: 8px;
-    text-align: left;
+
+#cart-items2{
+    background-color: white;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.cart-items img {
-    width: 50px;
+
+
+
+#cart-left {
+    display: flex;
+    gap: 80px;
+    margin-left:40px;
 }
+
+
+#cart-right {
+    display: flex;
+    gap: 100px;
+    margin-right:20px;
+}
+
 
 .delivery, .payment {
     padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.cart-item-details {
+.fees {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
+
+
+
+#total {
+    margin-top:120px;
+    margin-bottom:-80px;
+    margin-left:180px;
+}
+
+
+
 
 #right-commande {
     display: flex;
@@ -87,10 +130,51 @@ body, html {
     background:none;
 }
 
+#cart-left2 {
+display: flex;
+align-items: center;
+gap:75px;
+margin-left:15px;
+}
+
+
+#cart-items {
+    display: flex;
+    width: 900px; /* Tu peux ajuster la largeur selon tes besoins */
+    flex-direction: column; /* Change ici pour aligner les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments */
+   
+}
+
+
+#cart-right2 {
+    display: flex;
+    align-items: center;
+    gap:50px;
+    margin-right:20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:900px;
+    background-color: white;
+    
+}
+
 .trash {
     background: none;
     border: none;
+    width:50px;
 }
+
+#trash {
+    width:50px;
+}
+
+
 
 #jequittetrash:hover {
     transform:scale(1.1);
@@ -118,14 +202,19 @@ body, html {
 .payment form {
     display: flex;
     flex-direction: column;
+    gap: 80px;
 }
 
-.payment form input, .payment form button {
-    margin-top: 10px;
-}
 
 .payment .fees p {
     margin: 5px 0;
+}
+
+#payment-code {
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    gap:20px;
 }
 
 .item-image {

@@ -2,19 +2,29 @@ document.addEventListener('DOMContentLoaded', function() {
     displayCart();
     const cartItems = document.getElementById('cart-items');
 
-    // Gestion du retrait du panier
-    cartItems.addEventListener('click', function(event) {
-        if (event.target.classList.contains('trash')) {
-            const poissonId = event.target.getAttribute('data-id');
-            removeFromCart(poissonId);
-            event.target.parentElement.remove(); // Retire l'élément de l'interface utilisateur
-            updateTotal();
-        }
-    });
+    if (cartItems) {
+        cartItems.addEventListener('click', function(event) {
+            // Rechercher l'élément `.trash` le plus proche pour gérer les clics sur l'icône aussi
+            let target = event.target;
+            while (target != null && !target.classList.contains('trash')) {
+                target = target.parentElement;
+            }
+            if (target && target.classList.contains('trash')) {
+                const poissonId = target.getAttribute('data-id');
+                removeFromCart(poissonId);
+                // Supprimer le conteneur de l'élément du panier
+                target.closest('.cart-item').remove(); 
+                updateTotal();
+            }
+        });
+    }
 });
+
 
 function displayCart() {
     const cartItems = document.getElementById('cart-items');
+    if (!cartItems) return; // Sortie rapide si l'élément n'existe pas
+
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     cartItems.innerHTML = ''; // Nettoyer les anciens éléments
 
@@ -23,7 +33,9 @@ function displayCart() {
     } else {
         Object.values(cart).forEach(item => {
             const itemElement = createCartItemElement(item);
-            cartItems.appendChild(itemElement);
+            if (itemElement) {
+                cartItems.appendChild(itemElement);
+            }
         });
     }
     updateTotal();
@@ -34,31 +46,20 @@ function createCartItemElement(item) {
     itemElement.className = 'cart-item';
     if (item.species && !isNaN(item.quantity) && !isNaN(item.price) && item.image_path) {
         itemElement.innerHTML = `
-        <div class="cart-item-details">
-            <div id="left-commande">
+            <div id="cart-left2"> 
                 <img src="frontend/assets/img/${item.image_path}" alt="${item.species}" class="item-image">
                 <span class="item-name">${item.species}</span>
             </div>
-            <div id="right-commande">
-                <div>
-                    <span class="item-quantity">${item.quantity}</span>
-                </div>
-                <div>
-                <button class="trash" data-id="${item.id}"><img id="jequittetrash"src="/frontend/assets/img/trash.png"> </button>
-                </div>
-                <div>
-                    <span class="item-total-price">${(item.price * item.quantity).toFixed(2)}€</span>
-                </div>
-            </div>
-        </div>
-        
-        `;
+            <div id="cart-right2">
+            <span class="item-quantity">${item.quantity}</span>
+                <button class="trash" data-id="${item.id}"><img id="trash" src="/frontend/assets/img/trash.png"></button>
+                <span class="item-total-price">${(item.price * item.quantity + 10 + 10).toFixed(2)}€</span>
+            </div>`;
+        return itemElement;
     } else {
-        itemElement.innerHTML = `<p>Informations sur l'article manquantes ou incorrectes.</p>`;
+        return null; // Retourne null si les données de l'article sont manquantes
     }
-    return itemElement;
 }
-
 
 
 function removeFromCart(poissonId) {
@@ -73,7 +74,6 @@ function removeFromCart(poissonId) {
 function updateTotal() {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     let totalPrice = 0;
-
     Object.values(cart).forEach(item => {
         const price = parseFloat(item.price);
         const quantity = parseInt(item.quantity);
@@ -81,6 +81,8 @@ function updateTotal() {
             totalPrice += price * quantity;
         }
     });
-
-    document.getElementById('total-price').textContent = `Total: ${totalPrice.toFixed(2)}€`;
+    const totalPriceElement = document.getElementById('total-price');
+    if (totalPriceElement) {
+        totalPriceElement.textContent = `Total: ${totalPrice.toFixed(2)}€`;
+    }
 }

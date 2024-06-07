@@ -33,32 +33,20 @@
     <div class="container">
         <div class="summary">
             <h2>Résumé</h2>
-            <table class="cart-items">
-                <thead>
-                    <div id="left-commande">
-                        <div class="text-commande">
-                            <th>Image</th>
+            <div class="cart-items1">
+                    <div id="cart-items2">
+                        <div id="cart-left">
+                            <p>Image</p>
+                            <p>Nom du produit</p>
                         </div>
-                        
-                        <div class="text-commande">
-                            <th>Nom du produit</th>
-                        </div>
-                    </div>
-                        
-                    <div id="right-commande">
-                        <div class="text-commande">
-                            <th>Quantité</th>
-                        </div>
-                        
-                        <div class="text-commande">
-                            <th>Prix total</th>
+                        <div id="cart-right">
+                            <p>Quantité</p>
+                            <p>Prix total</p>
                         </div>
                     </div>
-                </thead>
-                <tbody>
-                    <div id="cart-items"></div>
-                </tbody>
-            </table>
+                <div id="cart-items">
+                </div>
+            </div>
         </div>
         
         
@@ -66,8 +54,10 @@
         <div class="payment">
             <h2>Paiement</h2>
             <form>
-                <label for="promo-code">Code Promo</label>
-                <input type="text" id="promo-code">
+                <div id="payment-code">
+                    <label for="promo-code">Code Promo</label>
+                    <input type="text" id="promo-code">
+                </div>  
                 <div class="fees">
                     <p>Tax Animal +10$</p>
                     <p>Transport +10$</p>

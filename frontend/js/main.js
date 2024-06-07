@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Erreur lors de la récupération des poissons:', error));
     }
 
+    if (currentPage.endsWith('plant.html')) {
+        fetch('http://localhost:3000/api/plants')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(plants => displayPlants(plants))
+            .catch(error => console.error('Erreur lors de la récupération des plantes:', error));
+    }
+
     if (currentPage === '/article.html') {
         const urlParams = new URLSearchParams(window.location.search);
         const poissonId = urlParams.get('id');

@@ -166,6 +166,43 @@ header {
 
   }
 
+  #other-container {
+    height: 100em;
+    width: 100em;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap:80px;
+
+  }
+
+  #achat {
+    height: 100em;
+    width: 100em;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap:80px;
+
+  }
+
+  #achat-plant {
+    height: 100em;
+    width: 100em;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap:80px;
+
+  }
+
+
   .caca {
     display: flex;
     justify-content: center;
@@ -605,6 +642,27 @@ header {
 }
 
 #achat-prop {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  gap:50px;
+}
+
+#achat {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  gap:50px;
+}
+
+#achat-plant {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  gap:50px;
+}
+
+#other-container {
   display: flex;
   flex-wrap: wrap;  
   align-items: center;
