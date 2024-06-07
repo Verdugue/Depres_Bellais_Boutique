@@ -56,14 +56,19 @@
             <form>
                 <div id="payment-code">
                     <label for="promo-code">Code Promo</label>
-                    <input type="text" id="promo-code">
+                    <div id="promo-box">
+                        <input type="text" id="promo-code">
+                        <button id="apply-promo">Appliquer</button>
+
+                    </div>
+                    <p id="discount-message">Aucun code promo n'a été sélectionnné</p>
                 </div>  
                 <div class="fees">
-                    <p>Tax Animal +10$</p>
-                    <p>Transport +10$</p>
+                    <p id="tax-message">Tax Animal +10€</p>
+                    <p id="transport-message">Transport +10€</p>
                 </div>
                 <div id="total">
-                    <p id="total-price">Total: 0.00€</p>
+                    <span id="ttl">Total: <p id="total-price">0.00</p></span>
                 </div>
                 <button id="button"type="submit">Valider ma commande</button>
             </form>

@@ -1,0 +1,134 @@
+ CREATE TABLE animals (    id_animals INT PRIMARY KEY,    species VARCHAR(50),    temp_moy VARCHAR(10),    stock INT,    location VARCHAR(50),    colors VARCHAR(50),    price DECIMAL(10, 2),    description TEXT,    ph VARCHAR(10),    id_panier INT,    id_environements INT,    image_path VARCHAR(50),    elevage TEXT,    origine TEXT);
+ INSERT INTO animals (id_animals, species, temp_moy, stock, location, colors, price, description, ph, id_panier, id_environements, image_path, elevage, origine) VALUES
+ (20, 'Discus', '28-30', 10, 'Aquarium Tropical', 'Multicolor', 30, 'Le Discus est un poisson coloré qui nécessite une eau bien filtrée et chauffée. Il est connu pour sa forme ronde et ses couleurs vives. Il est sensible à la qualité de l\'eau et doit être maintenu dans des conditions optimales.', '6.0-7.5', NULL, 6, 'discus.jpg', 'Le Discus doit être élevé dans un aquarium tropical avec une température entre 28 et 30°C. Un bon système de filtration et des changements d\'eau réguliers sont essentiels pour maintenir la qualité de l\'eau.', 'Originaire du bassin de l\'Amazone, en Amérique du Sud, le Discus est principalement trouvé dans les eaux lentes des rivières et des lacs.'),
+ (21, 'Clown Fish', '24-28', 15, 'Récif de Corail', 'Orange', 25, 'Le poisson clown est populaire parmi les aquariums marins en raison de sa relation symbiotique avec les anémones de mer. Il est facilement reconnaissable par ses bandes blanches distinctives sur un corps orange vif.', '8.1-8.4', NULL, 6, 'poisson_clown.jpg', 'Les poissons clowns doivent être élevés dans un récif de corail avec une température de l\'eau entre 24 et 28°C. Ils nécessitent des cachettes et un environnement riche en anémones pour prospérer.', 'Originaire de l\'océan Indien et du Pacifique, le poisson clown est généralement trouvé dans les récifs coralliens peu profonds.'),
+ (22, 'Surgeonfish', '22-25', 8, 'Grand Aquarium', 'Bleu', 40, 'Le chirurgien, également connu sous le nom de poisson chirurgien, nécessite un grand espace et une eau propre. Il est connu pour sa couleur bleue éclatante et sa nageoire caudale en forme de scalpel.', '8.1-8.4', NULL, 6, 'surgeon.jpg', 'Le chirurgien doit être élevé dans un grand aquarium avec une température de l\'eau entre 22 et 25°C. Un espace suffisant est nécessaire pour nager et éviter le stress.', 'Originaire des récifs coralliens des océans Indien et Pacifique, le chirurgien est souvent trouvé dans les eaux peu profondes.'),
+ (23, 'Coelacanth', '18-20', 2, 'Deep Sea Exhibit', 'Bleu foncé', 100, 'Le coelacanthe est une espèce rare, souvent appelée "fossile vivant" en raison de sa ressemblance avec des espèces préhistoriques. Il a une apparence unique avec ses nageoires lobées et son corps robuste.', '7.5-8.4', NULL, 6, 'coelocanthe.jpg', 'Le coelacanthe doit être élevé dans un environnement spécialisé imitant les conditions des grandes profondeurs, avec une température de l\'eau entre 18 et 20°C. Une filtration adéquate est cruciale.', 'Originaire des profondeurs marines de l\'océan Indien, le coelacanthe a été redécouvert au large des côtes d\'Afrique du Sud en 1938.'),
+ (24, 'Endler\'s Guppy', '22-26', 20, 'Petit Aquarium', 'Varié', 5, 'Le guppy d\'Endler est un petit poisson vif idéal pour les débutants. Il est connu pour ses couleurs vives et sa facilité de reproduction.', '6.7-8.5', NULL, 7, 'Endler_guppy.jpg', 'Le guppy d\'Endler doit être élevé dans un petit aquarium avec une température de l\'eau entre 22 et 26°C. Il préfère une végétation dense pour se cacher et se reproduire.', 'Originaire des petites rivières et des lagunes du Venezuela, le guppy d\'Endler est souvent trouvé dans des eaux chaudes et claires.'),
+ (25, 'Betta', '24-28', 30, 'Bacs individuels', 'Rouge', 10, 'Le Betta, ou poisson combattant, est réputé pour ses couleurs vives et ses nageoires élégantes. Il nécessite peu d\'entretien mais doit être maintenu seul en raison de son comportement territorial.', '6.5-7.5', NULL, 7, 'betta_splendens.jpg', 'Le Betta doit être élevé dans des bacs individuels avec une température de l\'eau entre 24 et 28°C. Il nécessite une filtration minimale et des changements d\'eau réguliers.', 'Originaire des rizières et des eaux stagnantes d\'Asie du Sud-Est, le Betta est couramment trouvé en Thaïlande, au Cambodge et au Vietnam.'),
+ (26, 'Koi Carp', '15-25', 5, 'Bassin extérieur', 'Orange', 50, 'La carpe Koi est un poisson de bassin populaire, connu pour ses motifs colorés et sa longévité. Elle peut atteindre de grandes tailles et vit généralement en extérieur.', '7.0-8.5', NULL, 7, 'carpe_koi.jpg', 'La carpe Koi doit être élevée dans un bassin extérieur avec une température de l\'eau entre 15 et 25°C. Un bon système de filtration et une surveillance régulière de la qualité de l\'eau sont essentiels.', 'Originaire du Japon, la carpe Koi a été développée à partir de la carpe commune et est maintenant élevée dans le monde entier pour ses couleurs variées.'),
+ (27, 'Angelfish (Poisson Ange)', '24-29', 12, 'Aquarium Communautaire', 'Blanc et noir', 20, 'Le poisson ange est un beau poisson nécessitant une bonne filtration. Il est connu pour sa forme gracieuse et ses couleurs contrastées.', '6.5-7.5', NULL, 8, 'angel_fish.jpg', 'Le poisson ange doit être élevé dans un aquarium communautaire avec une température de l\'eau entre 24 et 29°C. Il préfère des aquariums bien plantés avec beaucoup de cachettes.', 'Originaire des bassins amazoniens d\'Amérique du Sud, le poisson ange est souvent trouvé dans les eaux douces lentes.'),
+ (28, 'Fugu', '20-25', 4, 'Tank spécialisé', 'Gris', 200, 'Le Fugu, ou poisson-globe, est connu pour sa toxicité potentielle et doit être manipulé avec précaution. Sa chair est un mets délicat au Japon, préparé par des chefs spécialement formés.', '7.5-8.5', NULL, 8, 'fugu.webp', 'Le Fugu doit être élevé dans un tank spécialisé avec une température de l\'eau entre 20 et 25°C. Une filtration et une aération adéquates sont cruciales pour maintenir la qualité de l\'eau.', 'Originaire des eaux côtières de l\'océan Pacifique, le Fugu est couramment trouvé autour du Japon, de la Chine et de la Corée.');
+
+UPDATE animals SET 
+    description = 'Le Raskass, ou poisson-scorpion, est un poisson tropical coloré nécessitant un environnement enrichi avec des cachettes et des roches vivantes. Sa coloration vive lui permet de se camoufler dans les récifs coralliens.',
+    elevage = 'Le Raskass doit être élevé dans un récif de corail avec une température de 23-28°C et un pH de 7.0-8.5. Il est important de fournir un environnement riche en cachettes et de maintenir une bonne qualité de l\'eau.',
+    origine = 'Le Raskass est originaire des récifs coralliens des océans tropicaux, où il utilise sa coloration pour se fondre dans son environnement et éviter les prédateurs.'
+WHERE id_animals = 29;
+
+UPDATE animals SET 
+    description = 'Le Poisson Chat, ou Catfish, est un poisson de fond robuste et utile pour nettoyer les débris au fond de l\'aquarium. Il est nocturne et préfère se cacher pendant la journée.',
+    elevage = 'Le Poisson Chat doit être élevé au fond de l\'aquarium avec une température de 24-28°C et un pH de 6.5-8.0. Fournir des cachettes et des abris pour qu\'il puisse se reposer pendant la journée.',
+    origine = 'Le Poisson Chat est originaire des rivières et lacs d\'Amérique du Sud, où il joue un rôle important dans l\'écosystème en tant que nettoyeur de débris organiques.'
+WHERE id_animals = 30;
+
+UPDATE animals SET 
+    description = 'Le Plecostomus, ou Pléco, est un poisson de fond réputé pour sa capacité à nettoyer les algues dans l\'aquarium. Il est particulièrement actif la nuit.',
+    elevage = 'Le Plecostomus doit être élevé au fond de l\'aquarium avec une température de 23-27°C et un pH de 6.5-7.5. Il nécessite des cachettes et une alimentation complémentaire en algues ou en légumes bouillis.',
+    origine = 'Le Plecostomus est originaire des rivières et ruisseaux d\'Amérique du Sud, particulièrement du bassin de l\'Amazone, où il se nourrit principalement d\'algues et de débris végétaux.'
+WHERE id_animals = 31;
+
+UPDATE animals SET 
+    description = 'Le Poisson Minecraft est une créature fictive provenant de l\'univers du jeu vidéo Minecraft. Il est représenté par des pixels colorés et n\'a pas de caractéristiques biologiques réelles.',
+    elevage = 'Le Poisson Minecraft n\'a pas de méthode d\'élevage réelle car il s\'agit d\'un élément fictif du jeu Minecraft.',
+    origine = 'Le Poisson Minecraft est originaire de l\'univers virtuel de Minecraft, un jeu vidéo populaire développé par Mojang Studios.'
+WHERE id_animals = 32;
+
+UPDATE animals SET 
+    description = 'La Baudroie des Abysses, ou Anglerfish, est un poisson des grandes profondeurs connu pour son apparence terrifiante et sa capacité à attirer des proies grâce à un leurre lumineux sur sa tête.',
+    elevage = 'La Baudroie des Abysses doit être élevée dans des conditions spécifiques imitant les profondeurs océaniques avec une température très basse de 1-4°C. Ce poisson est extrêmement difficile à maintenir en captivité en raison de ses besoins environnementaux uniques.',
+    origine = 'La Baudroie des Abysses est originaire des zones abyssales des océans, où elle vit à des profondeurs extrêmes avec une pression élevée et une lumière minimale.'
+WHERE id_animals = 33;
+
+UPDATE animals SET 
+    description = 'Le Periophtalme, ou Mudskipper, est un poisson amphibie capable de survivre hors de l\'eau pour de courtes périodes. Il se distingue par ses yeux globuleux et sa capacité à se déplacer sur terre.',
+    elevage = 'Le Periophtalme doit être élevé dans une mangrove avec une température de 24-29°C et un pH de 7.5-8.5. Il est essentiel de fournir un substrat humide et des surfaces émergées pour qu\'il puisse grimper et respirer.',
+    origine = 'Le Periophtalme est originaire des mangroves et des marécages des régions tropicales et subtropicales, notamment en Afrique, Asie et Australie.'
+WHERE id_animals = 34;
+
+INSERT INTO animals (id_animals, species, temp_moy, stock, location, colors, price, description, ph, id_panier, id_environements, image_path, elevage, origine) VALUES
+(35, 'Araignée de Mer', '10-15', 5, 'Bassin Marin', 'Marron', 50, 
+    'L\'Araignée de Mer est un crustacé marin connu pour ses longues pattes et sa carapace épineuse. Elle est souvent trouvée sur les fonds sableux et rocheux.', 
+    '7.5-8.5', NULL, 10, 'araignee_de_mer.jpg', 
+    'L\'Araignée de Mer doit être élevée dans un bassin marin avec une température de 10-15°C et un pH de 7.5-8.5. Elle nécessite des cachettes et une alimentation composée de petits poissons et mollusques.', 
+    'L\'Araignée de Mer est originaire des côtes atlantiques européennes et des eaux méditerranéennes, où elle habite les zones littorales jusqu\'à 50 mètres de profondeur.'),
+
+(36, 'Axolotl', '16-18', 8, 'Aquarium d\'Eau Douce', 'Blanc et Noir', 30, 
+    'L\'Axolotl est un amphibien unique connu pour sa capacité à régénérer ses membres. Il est souvent maintenu en captivité en raison de son apparence fascinante et de sa biologie particulière.', 
+    '6.5-7.5', NULL, 11, 'axolotl.jpg', 
+    'L\'Axolotl doit être élevé dans un aquarium d\'eau douce avec une température de 16-18°C et un pH de 6.5-7.5. Il est important de fournir des cachettes et de maintenir une eau propre pour éviter les infections.', 
+    'L\'Axolotl est originaire des lacs de Xochimilco et Chalco au Mexique, où il vit dans des eaux peu profondes et bien oxygénées.'),
+
+(37, 'Neocaridina Blue Velvet', '22-28', 20, 'Nano Aquarium', 'Bleu', 10, 
+    'La Neocaridina Blue Velvet est une crevette d\'aquarium populaire pour sa couleur bleue vibrante. Elle est active et aide à maintenir la propreté de l\'aquarium.', 
+    '6.5-7.5', NULL, 7, 'neocaridina_blue_velvet.jpg', 
+    'La Neocaridina Blue Velvet doit être élevée dans un nano aquarium avec une température de 22-28°C et un pH de 6.5-7.5. Elle nécessite une végétation dense et des cachettes pour se sentir en sécurité.', 
+    'La Neocaridina Blue Velvet est originaire d\'Asie du Sud-Est, où elle habite les ruisseaux et les petites rivières avec une végétation dense.'),
+
+(38, 'Hippocampe Commun', '20-25', 10, 'Aquarium Marin', 'Gris et Jaune', 40, 
+    'L\'Hippocampe Commun est un poisson marin reconnaissable à sa forme distinctive et sa capacité à s\'accrocher aux plantes avec sa queue préhensile. Il est apprécié pour sa beauté et son comportement unique.', 
+    '8.0-8.4', NULL, 6, 'hippocampe_commun.jpg', 
+    'L\'Hippocampe Commun doit être élevé dans un aquarium marin avec une température de 20-25°C et un pH de 8.0-8.4. Il nécessite un environnement riche en plantes marines et des endroits où s\'accrocher.', 
+    'L\'Hippocampe Commun est originaire des eaux côtières de l\'océan Atlantique, de la mer Méditerranée et de la mer Noire, où il vit parmi les herbiers marins et les récifs rocheux.'),
+
+(39, 'Méduse Constelle', '22-25', 5, 'Aquarium Spécialisé', 'Translucide', 60, 
+    'La Méduse Constelle est une méduse fascinante avec des motifs lumineux sur son ombrelle. Elle est délicate et nécessite des conditions spécifiques pour survivre en captivité.', 
+    '7.5-8.5', NULL, 6, 'meduse_constelle.jpg', 
+    'La Méduse Constelle doit être élevée dans un aquarium spécialisé avec une température de 22-25°C et un pH de 7.5-8.5. Il est crucial d\'avoir un système de filtration doux pour éviter de blesser ses tentacules.', 
+    'La Méduse Constelle est originaire des océans Atlantique, Pacifique et Indien, où elle dérive avec les courants marins dans les eaux côtières et hauturières.'),
+
+(40, 'Poissons Tropicaux de Minecraft', NULL, 15, 'Aquarium Virtuel', 'Pixel', 5, 
+    'Les Poissons Tropicaux de Minecraft sont des créatures fictives issues du jeu vidéo Minecraft. Ils sont représentés par des pixels colorés et sont souvent utilisés pour décorer les aquariums virtuels.', 
+    NULL, NULL, 9, 'poissons_tropicaux_minecraft.jpg', 
+    'Les Poissons Tropicaux de Minecraft n\'ont pas de méthode d\'élevage réelle car ils sont des éléments fictifs du jeu Minecraft.', 
+    'Les Poissons Tropicaux de Minecraft proviennent de l\'univers virtuel de Minecraft, un jeu vidéo développé par Mojang Studios.'),
+
+(41, 'Pieuvre Commune', '10-22', 4, 'Bassin Spécialisé', 'Marron', 80, 
+    'La Pieuvre Commune est un céphalopode intelligent connu pour sa capacité à changer de couleur et à résoudre des problèmes complexes. Elle nécessite un environnement enrichi pour éviter l\'ennui.', 
+    '8.0-8.4', NULL, 12, 'pieuvre_commune.jpg', 
+    'La Pieuvre Commune doit être élevée dans un bassin spécialisé avec une température de 10-22°C et un pH de 8.0-8.4. Il est crucial de fournir des jouets et des cachettes pour stimuler son intelligence.', 
+    'La Pieuvre Commune est originaire des océans Atlantique, Pacifique et Indien, où elle habite les récifs coralliens, les herbiers marins et les zones rocheuses.'),
+
+(42, 'Periophtalmus', '24-29', 10, 'Mangrove', 'Marron', 20, 
+    'Le Periophtalmus, ou Mudskipper, est un poisson amphibie capable de survivre hors de l\'eau pour de courtes périodes. Il se distingue par ses yeux globuleux et sa capacité à se déplacer sur terre.', 
+    '7.5-8.5', NULL, 10, 'periophthalmus.jpg', 
+    'Le Periophtalmus doit être élevé dans une mangrove avec une température de 24-29°C et un pH de 7.5-8.5. Il est essentiel de fournir un substrat humide et des surfaces émergées pour qu\'il puisse grimper et respirer.', 
+    'Le Periophtalmus est originaire des mangroves et des marécages des régions tropicales et subtropicales, notamment en Afrique, Asie et Australie.'),
+
+(43, 'Crevette Red Cherry', '22-28', 20, 'Nano Aquarium', 'Rouge', 10, 
+    'La Crevette Red Cherry est une crevette d\'aquarium populaire pour sa couleur rouge vive. Elle est active et aide à maintenir la propreté de l\'aquarium.', 
+    '6.5-7.5', NULL, 7, 'crevette_red_cherry.jpg', 
+    'La Crevette Red Cherry doit être élevée dans un nano aquarium avec une température de 22-28°C et un pH de 6.5-7.5. Elle nécessite une végétation dense et des cachettes pour se sentir en sécurité.', 
+    'La Crevette Red Cherry est originaire d\'Asie du Sud-Est, où elle habite les ruisseaux et les petites rivières avec une végétation dense.');
+
+    INSERT INTO animals (id_animals, species, temp_moy, stock, location, colors, price, description, ph, id_panier, id_environements, image_path, elevage, origine) VALUES
+(44, 'Tortue Marine', '22-28', 3, 'Bassin Marin', 'Vert et Marron', 150, 
+    'La Tortue Marine est un reptile marin majestueux connu pour sa longévité et ses migrations sur de longues distances. Elle nécessite un grand bassin pour nager librement.', 
+    '7.5-8.5', NULL, 13, 'tortue_marine.jpg', 
+    'La Tortue Marine doit être élevée dans un grand bassin marin avec une température de 22-28°C et un pH de 7.5-8.5. Il est crucial de fournir suffisamment d\'espace pour nager et des plages de sable pour pondre.', 
+    'La Tortue Marine est originaire des océans tropicaux et subtropicaux du monde entier, où elle migre entre les plages de nidification et les aires d\'alimentation.'),
+
+(45, 'Requin Baleine', '24-30', 2, 'Bassin Marin', 'Gris et Blanc', 300, 
+    'Le Requin Baleine est le plus grand poisson au monde, connu pour sa taille massive et son régime alimentaire de plancton. Il est paisible et nécessite un bassin extrêmement grand.', 
+    '7.5-8.5', NULL, 14, 'requin_baleine.jpg', 
+    'Le Requin Baleine doit être élevé dans un bassin marin avec une température de 24-30°C et un pH de 7.5-8.5. Il est essentiel de fournir un espace de nage très vaste et une alimentation adaptée.', 
+    'Le Requin Baleine est originaire des eaux tropicales et subtropicales du monde entier, où il parcourt les océans à la recherche de plancton et de petits poissons.'),
+
+(46, 'Roussette', '10-15', 5, 'Bassin Marin', 'Gris', 80, 
+    'La Roussette est un petit requin marin connu pour sa capacité à survivre dans des environnements divers. Elle est souvent élevée en captivité en raison de sa résilience et de sa taille modérée.', 
+    '7.5-8.5', NULL, 10, 'roussette.jpg', 
+    'La Roussette doit être élevée dans un bassin marin avec une température de 10-15°C et un pH de 7.5-8.5. Elle nécessite des cachettes et un espace de nage suffisant.', 
+    'La Roussette est originaire des côtes atlantiques européennes, où elle habite les fonds marins rocheux et sableux.'),
+
+  UPDATE animals SET image_path = 'araignee_de_mer.jpg' WHERE id_animals = 35;
+UPDATE animals SET image_path = 'axolot.jpg' WHERE id_animals = 36;
+UPDATE animals SET image_path = 'blue_velvet.jpg' WHERE id_animals = 37;
+UPDATE animals SET image_path = 'hippocampe.jpg' WHERE id_animals = 38;
+UPDATE animals SET image_path = 'meduses_constelles.jpg' WHERE id_animals = 39;
+UPDATE animals SET image_path = 'minecraft_fish.jpg' WHERE id_animals = 40;
+UPDATE animals SET image_path = 'Ocotpus.jpg' WHERE id_animals = 41;
+UPDATE animals SET image_path = 'periophtalmus.jpg' WHERE id_animals = 42;
+UPDATE animals SET image_path = 'periophtalmus.jpg' WHERE id_animals = 43;
+UPDATE animals SET image_path = 'tortue.jpg' WHERE id_animals = 44;
+UPDATE animals SET image_path = 'requin_baleine.jpg' WHERE id_animals = 45;
+UPDATE animals SET image_path = 'roussette.jpg' WHERE id_animals = 46;
