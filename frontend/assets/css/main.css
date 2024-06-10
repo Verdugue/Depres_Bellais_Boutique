@@ -161,10 +161,44 @@ header {
     background-color: rgba(128, 128, 128, 0.315);
     border-radius: 20px;
     justify-content: center;
+    
     flex-direction: column;
     gap:80px;
 
   }
+  .promo-banner {
+    background-color: red;
+    
+    color: white;
+    margin-right: -9px;
+    margin-left: -10px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+    height: 80px; /* Ajustez cette hauteur selon vos besoins */
+}
+
+.promo-banner p {
+    display: inline-block;
+    position: absolute;
+    animation: scroll 10s linear infinite;
+    padding-top: 5px; /* Ajustez cette valeur pour remonter le texte */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
 
   #other-container {
     height: 100em;
@@ -226,30 +260,35 @@ header {
 
 .info1{
     background-color: rgb(255, 255, 255);
-    height:500px;
-    width: 1200px;
+    height:400px;
+    width: 1000px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     gap:50px;
     border-radius: 20px;
-    margin-top:20px;
+    margin-top:40px;
+    text-align: center;
 
 }
 
 .image-i {
-    width:600px;
+    width:400px;
     border-radius: 20px;
     box-shadow: 7px 10px 10px  rgba(0, 0, 0, 0.205);
 }
 
 #infos {
+  background-image: url(/frontend/assets/img/ocean.jpeg);
     gap:20px;
     display: flex;
     flex-direction: column;
     width:100%;
+    height:900px;
     align-items: center;
-    
+    align-content: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100%;
@@ -259,13 +298,14 @@ header {
 
 .info2{
     background-color: rgb(255, 255, 255);
-    height:500px;
-    width: 1200px;
+    height:400px;
+    width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:50px;
     border-radius: 20px;
+    text-align: center;
 }
 
 .text {
@@ -280,12 +320,12 @@ header {
 }
 
 .text-style {
-    font-size: 20px;
+    font-size: 15px;
 
 }
 
 .text-h1 {
-    font-size: 40px;
+    font-size: 25px;
 
 }
 

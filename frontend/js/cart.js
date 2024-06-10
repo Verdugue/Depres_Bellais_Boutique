@@ -3,22 +3,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartItems = document.getElementById("cart-items");
 
   if (cartItems) {
-    cartItems.addEventListener("click", function (event) {
-      // Rechercher l'élément `.trash` le plus proche pour gérer les clics sur l'icône aussi
-      let target = event.target;
-      while (target != null && !target.classList.contains("trash")) {
-        target = target.parentElement;
-      }
-      if (target && target.classList.contains("trash")) {
-        const poissonId = target.getAttribute("data-id");
-        removeFromCart(poissonId);
-        // Supprimer le conteneur de l'élément du panier
-        target.closest(".cart-item").remove();
-        updateTotal();
-      }
-    });
+      cartItems.addEventListener("click", function (event) {
+          let target = event.target;
+          while (target != null && !target.classList.contains("trash")) {
+              target = target.parentElement;
+          }
+          if (target && target.classList.contains("trash")) {
+              const poissonId = target.getAttribute("data-id");
+              removeFromCart(poissonId);
+              target.closest(".cart-item").remove();
+              updateTotal();
+          }
+      });
+  }
+
+  const validateOrderButton = document.getElementById('validate-order-button');
+  if (validateOrderButton) {
+      validateOrderButton.addEventListener('click', function () {
+          const totalAmount = calculateTotalAmount();
+          window.location.href = `payment.html?total=${totalAmount}`;
+      });
   }
 });
+
+function calculateTotalAmount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  let totalAmount = 0;
+  Object.values(cart).forEach(item => {
+      totalAmount += item.price * item.quantity;
+  });
+  // Ajoutons les taxes de 20 euros
+  totalAmount += 20;
+  return totalAmount.toFixed(2);
+}
 
 function displayCart() {
   const cartItems = document.getElementById("cart-items");
@@ -44,26 +61,20 @@ function createCartItemElement(item) {
   const itemElement = document.createElement("div");
   itemElement.className = "cart-item";
   if (
-    item.species &&
+    item.name &&
     !isNaN(item.quantity) &&
     !isNaN(item.price) &&
     item.image_path
   ) {
     itemElement.innerHTML = `
               <div id="cart-left2"> 
-                  <img src="frontend/assets/img/${item.image_path}" alt="${
-      item.species
-    }" class="item-image">
-                  <span class="item-name">${item.species}</span>
+                  <img src="frontend/assets/img/${item.image_path}" alt="${item.name}" class="item-image">
+                  <span class="item-name">${item.name}</span>
               </div>
               <div id="cart-right2">
                   <span class="item-quantity">${item.quantity}</span>
-                  <button class="trash" data-id="${
-                    item.id
-                  }"><img id="trash" src="/frontend/assets/img/trash.png"></button>
-                  <span class="item-total-price">${(
-                    item.price * item.quantity
-                  ).toFixed(2)}€</span>
+                  <button class="trash" data-id="${item.id}"><img id="trash" src="/frontend/assets/img/trash.png"></button>
+                  <span class="item-total-price">${(item.price * item.quantity).toFixed(2)}€</span>
               </div>`;
     return itemElement;
   } else {
@@ -115,6 +126,7 @@ function updateTotal() {
 document.addEventListener("DOMContentLoaded", function () {
   const promoCodes = {
     PROMO20: 0.2, // 20% de réduction
+    PROMO30:0.3,
   };
 
   const totalAmountElement = document.getElementById("total-price");
@@ -130,9 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (discount) {
       const originalTotal = parseFloat(totalAmountElement.textContent);
       const newTotal = originalTotal - originalTotal * discount;
-      totalAmountElement.textContent = `${newTotal.toFixed(
-        2
-      )}€ (Taxes inclues)`;
+      totalAmountElement.textContent = `${newTotal.toFixed(2)}€ (Taxes inclues)`;
 
       discountMessageElement.textContent = `Code promo appliqué: ${promoCode} - ${
         discount * 100
