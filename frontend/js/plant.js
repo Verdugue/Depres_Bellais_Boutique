@@ -33,10 +33,7 @@ function createPlantCard(plant) {
                     <div class="text-commande">
                         <p class="card-text">${plant.description}</p>
                     </div>
-                    <div class="text-commande">
-                        <p class="list-group-item"><strong>Stock:</strong> ${plant.stock}</p>
-                        <p class="list-group-item"><strong>PH:</strong> ${plant.ph}</p>
-                    </div>
+                   
                 </div>
             </div>
         </a>

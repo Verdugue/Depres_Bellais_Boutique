@@ -31,7 +31,7 @@ function createAnimalCard(animal) {
                 <div id="left-commande">
                     <div class="text-commande">
                         <h5 class="card-title">${animal.species}</h5>
-                        <p class="card-text">${animal.description}</p>
+                        <p class="card-text">${animal.origine}</p>
                     </div>
                 </div>
                 <div id="right-commande">

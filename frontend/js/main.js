@@ -160,7 +160,7 @@ function createCard(item, type) {
         linkUrl = `/article.html?id=${item.id_animals}`;
         imageUrl = `frontend/assets/img/${item.image_path}`;
         title = item.species;
-        description = item.description;
+        description = item.location;
         price = item.price;
     } else if (type === 'plant') {
         linkUrl = `/article.html?id=${item.id_plant}`;
