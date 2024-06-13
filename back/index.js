@@ -5,10 +5,13 @@ const port = 3000;
 const poissonRoutes = require('./routes/poisson');
 const plantRoutes = require('./routes/plant');
 const otherRoutes = require('./routes/other');
+const filterRoutes = require('./routes/filter');
 
 app.use(cors());
 app.use(express.json());
 
+
+app.use('/api/filter', filterRoutes);
 app.use('/api/poissons', poissonRoutes);
 app.use('/api/plants', plantRoutes);
 app.use('/api/others', otherRoutes);

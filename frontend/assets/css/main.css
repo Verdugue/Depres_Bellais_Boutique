@@ -723,6 +723,7 @@ body {
   transition: 0.3s;
   border-radius: 20px;
   background-color: #1E375A;
+  text-decoration:none ;
   color: white;
   border: rgba(255, 255, 255, 0.028) solid 0.1px;
   width: 250px; /* Ajustez en fonction de la largeur désirée */
@@ -734,30 +735,38 @@ body {
   transform: scale(1.02);
 }
 
+#left-commande {
+  text-decoration: none;
+}
+
 .card img {
-  width: 100%;
-  height: 40%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   box-shadow: 7px 10px 10px  rgba(0, 0, 0, 0.205);
 }
 
 .card-body {
+  text-decoration:none ;
+  color:white;
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
   
 }
 
 
 .card-img-top {
-  width:10px;
+  width:100%;
+  height:180px;
 }
 
 
 .card-title {
   font-size: 17px;
   display: flex;
+  color:white;
+  text-decoration: none;
   justify-content: center;
   margin-left:10px;
 }
@@ -765,6 +774,8 @@ body {
 .card-text {
   font-size:12px; 
   margin-left:10px;
+  text-decoration: none;
+  color:white;
 }
 
 .list-group-item {

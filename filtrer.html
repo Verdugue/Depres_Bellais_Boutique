@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="/frontend/assets/css/filter.css">
+    <script src="/frontend/js/filter.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="/index.html">← Retour</a>
+        <img class="logo" src="/frontend/assets/img/logo_2.png" alt="Site Logo">
+    </header>
+    <div class="container">
+        <h1>Filtrer les Produits</h1>
+        <div class="filter-group">
+            <div>
+                <label for="filter-category">Catégorie:</label>
+                <select id="filter-category">
+                    <option value="">Sélectionner une catégorie</option>
+                    <option value="poisson">Poisson</option>
+                    <option value="plant">Plante</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-species">Espèce:</label>
+                <select id="filter-species">
+                    <option value="">Choisir une espèce</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-location">Emplacement:</label>
+                <select id="filter-location">
+                    <option value="">Choisir un emplacement</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-color">Couleur:</label>
+                <select id="filter-color">
+                    <option value="">Choisir une couleur</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-min-price">Prix minimum:</label>
+                <input type="number" id="filter-min-price">
+            </div>
+            <div>
+                <label for="filter-max-price">Prix maximum:</label>
+                <input type="number" id="filter-max-price">
+            </div>
+            <button id="filter-button">Filtrer</button>
+        </div>
+        <div id="results-container"></div>
+    </div>
+</body>
+</html>

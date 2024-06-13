@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname;
+    
 
     if (currentPage === '/' || currentPage === '/index.html') {
         fetch('http://localhost:3000/api/poissons')
