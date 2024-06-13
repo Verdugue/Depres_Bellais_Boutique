@@ -1,22 +1,21 @@
 @font-face {
-    font-family: myfont;
-    src: url(/frontend/assets/font/Caveat-VariableFont_wght.ttf);
-  }
+  font-family: "Roboto Mono", monospace;
+  src: url(/frontend/assets/font/RobotoMono-VariableFont_wght.ttf);
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
-  #koi-logo {
-    width: 60%;
-    transition: width 0.3s, opacity 0.3s; /* Transition pour la largeur et l'opacité */
-  }
+#koi-logo {
+  width: 60%;
+  transition: width 0.3s, opacity 0.3s; /* Transition pour la largeur et l'opacité */
+}
 
 .title {
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 25px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 25px;
 }
 
 html {
@@ -24,74 +23,62 @@ html {
   background-color: #1ea0dd;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
+  background-color: #1E375A;
   font-weight: weight;
   font-style: normal;
   background-size: 100%;
-
+  margin-bottom: 50px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
 body {
-	background: #dddddd00;
-	font-size: 15px;
-  
+  background: #dddddd00;
+  font-size: 15px;
 }
 
-
-
-
 header {
-    padding-left:-7700px;
-
+  padding-left: -7700px;
 }
 
 #header-top {
-    border-bottom: solid rgba(0, 0, 0, 0.247) 0.01cm ;
+  border-bottom: solid rgba(0, 0, 0, 0.247) 0.01cm;
 }
 
-#big{
+#big {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 #fo {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    justify-content: space-around;
-    margin-left:300px;
-   
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin-left: 100px;
 }
 
 .logo {
-    width: 260%;
-
+  width: 260%;
 }
 
 .logo-boutique {
-    width: 75%; 
+  width: 75%;
 }
 
 #logo-site {
-    width: 150px;
-    display: flex;
-    
-    flex-direction: column;
-    
-
+  width: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 #panier {
-    width:20px;
-
+  width: 20px;
 }
 
-#koi-logo  {
-    
-    width: 60%;
+#koi-logo {
+  width: 60%;
 }
 
 #header-bottom {
@@ -103,169 +90,163 @@ header {
 }
 
 #papa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:50px;
-    margin-top: 50px;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+  width: 80%;
 }
 
 #selection {
-    background-color: rgba(61, 61, 61, 0.171);
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    width:50%;
-    border-radius: 20px;
-
+  background-color: rgba(61, 61, 61, 0.171);
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 50%;
+  border-radius: 20px;
 }
 
- .selection-link  {
-    text-decoration: none;
+.selection-link {
+  text-decoration: none;
+}
 
- }
+.selection-fish {
+  background-color: rgba(35, 167, 35, 0.397);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
 
- .selection-fish {
-    background-color: rgba(35, 167, 35, 0.397);
-    width:100px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px ;
-    
- }
+.selection-other {
+  background-color: rgba(255, 0, 0, 0.315);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
 
- .selection-other  {
-    background-color: rgba(255, 0, 0, 0.315);
-    width:100px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px ;
- }
+.selection-plant {
+  background-color: rgba(0, 0, 243, 0.459);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
 
- .selection-plant {
-    background-color: rgba(0, 0, 243, 0.459);
-    width:100px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px ;
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 100px;
+  width: 100%;
+}
 
- }
+#achat-prop {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.315);
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  padding: 40px;
+}
 
- #main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.caca {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
 
-    margin-top: 20px;
-    gap:100px;
-    width: 100%;
- }
+.article {
+  margin-top: 50px;
+  background-color: white;
+  color: white;
+  height: 310px;
+  width: 250px;
+  border-radius: 20px;
+}
 
-  #achat-prop {
-    height: 100%;
-    width: 90%;
-    display: flex;
-    background-color: rgb(241, 235, 235);
-    border-radius: 20px;
-    justify-content: center;
-    flex-direction: column;
-    gap:80px;
-    padding: 40px;
-  }
-
-  .caca {
-    display: flex;
-    justify-content: center;
-    
-    gap:50px;
-   
-   
-
-  }
-
-  .article {
-    margin-top: 50px;
-    background-color: white;
-    height:310px;
-    width:250px;
-    border-radius: 20px;
-    
-
-
-  }
-
-.info1{
-    background-color: rgb(255, 255, 255);
-    height:500px;
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
-    border-radius: 20px;
-    margin-top:20px;
-
+.info1 {
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border-radius: 20px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .image-i {
-    width:600px;
-    border-radius: 20px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.205);
 }
 
 #infos {
-    gap:20px;
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 130%;
-    padding-inline:10px ;
+  background-image: url(/frontend/assets/img/ocean.jpeg);
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 101%;
+  height: 900px;
+  align-items: center;
+  align-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  margin-left: -10px;
+  margin-top: 200px;
 }
 
-.info2{
-    background-color: rgb(255, 255, 255);
-    height:500px;
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
-    border-radius: 20px;
+.info2 {
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .text {
-    font-family: "Roboto Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:500px;
-    gap:50px;
-    
-
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  gap: 50px;
 }
 
 .text-style {
-    font-size: 20px;
-
+  font-size: 15px;
+  color: black;
 }
 
 .text-h1 {
-    font-size: 40px;
-
+  font-size: 25px;
+  color: black;
 }
 
 #commande {
   display: flex;
-  gap:300px;
+  gap: 300px;
   align-items: center;
   align-content: center;
   height: 500px;
@@ -280,7 +261,6 @@ header {
 
 #logo-colis {
   width: 300px;
-
 }
 
 #logo-relais {
@@ -291,142 +271,124 @@ header {
 
 .texte {
   background-color: rgba(128, 128, 128, 0);
-  width:210px;
+  width: 210px;
   display: flex;
- text-align: center;
- font-family: "Roboto Mono", monospace;
- font-size:26px;
-
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 26px;
 }
 
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-#koi-history{
+#koi-history {
   background-color: rgb(49, 49, 49);
-  color:white;
-  
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
   font-family: "Roboto Mono", monospace;
   padding-left: 20px;
+  margin-top: 200px;
 }
 
 #koi-history-texte-div {
- text-align: center;
- font-family: "Roboto Mono", monospace;
- width:500px;
- font-size: 19px;
-
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  width: 500px;
+  font-size: 19px;
 }
 
 #footer {
   display: flex;
   justify-content: space-evenly;
   gap:400px;
+  color:white;
   background-color: rgba(116, 0, 0, 0);
   width:100%;
-  margin-top: -70px;
+  margin-top: 70px;
+  margin-bottom:50px;
 }
 
 #footer-middle {
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 
 #middle-bottom {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 }
 
 .logo-fb {
-  width:30px;
-
+  width: 30px;
 }
 
 .logo-insta {
-  width:30px;
-  
+  width: 30px;
 }
 
 .logo-pinterest {
-  width:30px;
-  
+  width: 30px;
 }
 
 .logo-tiktok {
-  width:30px;
-  
+  width: 30px;
 }
-
 
 #middle-footer {
   display: flex;
-  
 }
 
 #test {
   display: flex;
-  gap:20px;
-  
+  gap: 20px;
 }
-
-
 
 #footer-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
-
 }
 
 .logo-boutique {
-  width:100px;
-  
+  width: 100px;
 }
 
-#sub   {
-  
-  z-index:5000;
-
+#sub {
+  z-index: 5000;
 }
 
 #eng {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
-
+  gap: 30px;
 }
 
 .logo-padi {
-  width:50px;
-
+  width: 50px;
 }
 
 .logo-wwf {
-  width:55px;
-
+  width: 55px;
 }
 
 .logo-sea {
-  width:90px;
-
+  width: 90px;
 }
 
 #logo-footer {
   display: flex;
-  gap:20px;
-} 
+  gap: 20px;
+}
 
 #footer-left {
   align-content: center;
@@ -435,15 +397,13 @@ header {
 #info {
   font-size: 30px;
   font-family: "Roboto Mono", monospace;
-
 }
 
 #condition {
   font-family: "Roboto Mono", monospace;
-  text-decoration:none;
-  color:rgba(240, 240, 240, 0.89);
+  text-decoration: none;
+  color: rgba(240, 240, 240, 0.89);
   font-size: 25px;
-
 }
 
 #conditions {
@@ -451,30 +411,73 @@ header {
   text-decoration:none;
   color:rgba(240, 240, 240, 0.89);
   font-size: 25px;
-
+  color:white;
 }
 
 #conditions:hover {
   color:black;
+  color:white;
 }
+
 
 #sd {
-
   display: flex;
   flex-direction: column;
-  gap:10px;
-
 }
 
+#sd > div {
+  position: relative;
+  margin: 10px 0;
+}
+
+.conditions {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  color:white;
+}
+
+.conditions::before,
+.conditions::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.651);
+  width: 0;
+  bottom: 0;
+  transition: width 0.4s ease;
+}
+
+.conditions::before {
+  left: 50%;
+}
+
+.conditions::after {
+  right:0%;
+}
+
+.conditions:hover {
+  color:rgba(255, 255, 255, 0.505);
+}
+
+.conditions:hover::before,
+.conditions:hover::after {
+  width: 50%;
+  left: 0;
+  right: 0;
+}
+
+
 #input {
-  width:100px;
+  width: 100px;
   background-color: rgb(255, 255, 255);
   z-index: 10000;
-  width:200px;
+  width: 200px;
   height: 30px;
   border-radius: 10px;
   border: none;
-  
 }
 
 #subscribe {
@@ -483,138 +486,149 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 
- #label {
+#label {
   font-size: 20px;
-
- }
+}
 
 #engagement {
   font-size: 30px;
-
 }
 
 #inputs {
-  display:flex ;
- gap:5px;
- margin-left: 40px;
-
+  display: flex;
+  gap: 5px;
+  margin-left: 40px;
 }
 
 #input-image {
-  width:30px;
-
+  width: 30px;
 }
 
 .article-image {
-    width: 40%;
-    height: 20%;
-    border-radius: 20px;
-    
+  width: 40%;
+  height: 20%;
+  border-radius: 20px;
 }
 
 #article {
-    
-    width: 96%;
-    
-    padding: 40px;
-    border-radius: 20px;
+  width: 96%;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
 }
 
 #nom {
-    font-size: 30px;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: bolder;
-    font-style: normal;
-    text-shadow: 5px 8px 14px #000000;
+  font-size: 30px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+  text-shadow: 5px 8px 14px #000000;
 }
 
-#img-tox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+#img-tox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #prix-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-    font-size: 20px;
-    margin-right: 10%;
-    border: solid black 4px;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 8px 5px 10px rgb(62, 60, 60);
-    width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 10%;
+  border: solid rgba(255, 255, 255, 0.259) 1px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px -1px 23px -9px rgba(0, 0, 0, 0.87);
+  width: 15%;
 }
 
-#selecteur{
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 8px 5px 10px rgb(62, 60, 60);
-    background-color: rgb(242, 234, 234);
-    border: solid black 1px;
-    width: 30%;
-    height: 60px;
-    font-size: 15px;
+#selecteur {
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 8px 5px 10px rgb(62, 60, 60);
+  background-color: rgb(242, 234, 234);
+  border: solid black 1px;
+  width: 30%;
+  height: 60px;
+  font-size: 15px;
 }
 
 #basket {
-    width: 30%;
+  width: 30%;
 }
 
-#quantity{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content:center;
-    padding: 5px;
-    margin-left: 5px;
-    margin-top: 5px;
+#quantity {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-#desc-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 18px;
-    margin-top: 3vh;
+#desc-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
+  margin-top: 3vh;
 }
 
-#question{
-    width: 35%;
+#question {
+  width: 35%;
 }
 
-#globe{
-    width: 20%;
+#globe {
+  width: 20%;
 }
 
-#origine-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 18px;
+#origine-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
 }
 
-#elevage-box{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 18px;
+#elevage-box {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
 }
 
-#star{
-    width: 20%;
+#star {
+  width: 20%;
 }
+
+/* Example CSS for slide-in and slide-out animations */
+.slide-in {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-out {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Add any other necessary CSS for your layout */

@@ -122,6 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
+    const commande = document.getElementById('commande');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            console.log(entry); // Log the entry to check if it's working
+            if (entry.isIntersecting) {
+                commande.classList.add('slide-in');
+                commande.classList.remove('slide-out');
+            } else {
+                commande.classList.remove('slide-in');
+                commande.classList.add('slide-out');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(commande);
 });
 
 function displayPoissons(poissons) {

@@ -10,7 +10,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: myfont;
-    background-color: #87CEFA;
+    background-color: #1E375A;
+    color:white;
 }
 
 .header {
@@ -56,7 +57,7 @@ body, html {
 
 
 #cart-items2{
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.315);
     margin-bottom:10px;
     display: flex;
     justify-content: space-between;
@@ -116,7 +117,7 @@ body, html {
 }
 
 .payment {
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.315);
     width:300px;
     display: flex;
     flex-direction: column;
@@ -167,7 +168,7 @@ margin-left:15px;
     align-items: center;
     justify-content: space-between;
     width:900px;
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.315);
     
 }
 
@@ -198,7 +199,7 @@ margin-left:15px;
 }
 
 .recap {
-    background-color: #e5e4e292	;
+    background-color: rgba(128, 128, 128, 0.315);
     border-radius: 10px;
     padding-right:20px;
     padding-left:20px;
@@ -254,12 +255,18 @@ margin-left:15px;
 
 #koi-titre {
     width:100px;
+    color:white;
 }
 
 .continue-shopping{
     text-decoration: none;
-    color:black;
+color:white;
 
+}
+
+#kanoe {
+    display: flex;
+    justify-content: center;    
 }
 
 

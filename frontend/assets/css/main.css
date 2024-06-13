@@ -12,9 +12,10 @@
 
 html {
   /*background-image:url(/frontend/assets/img/sdlfihds.png);*/
-  background-color: #1ea0dd;
+  background-color: #1E375A;
   font-family: myfont;
   background-size: 100%;
+  color: white;
 
 }
 
@@ -28,10 +29,6 @@ body {
 
 
 
-header {
-    padding-left:-7700px;
-
-}
 
 #header-top {
     border-bottom: solid rgba(0, 0, 0, 0.247) 0.01cm ;
@@ -41,8 +38,7 @@ header {
     display: flex;
     align-items: center; 
     justify-content: center;
-    justify-content: space-around;
-    margin-left:300px;
+    justify-content: space-evenly;  
    
 
 }
@@ -98,11 +94,11 @@ header {
 }
 
 #selection {
-    background-color: rgba(128, 128, 128, 0.226);
+    background-color: rgba(128, 128, 128, 0.315);
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    width:50%;
+    width:100%;
     border-radius: 20px;
 
 }
@@ -113,9 +109,10 @@ header {
  }
 
  .selection-fish {
-    background-color: rgba(35, 167, 35, 0.397);
-    width:100px;
+    background-color: #1E375A;
+    width:200px;
     display: flex;
+    color: white;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -125,8 +122,10 @@ header {
  }
 
  .selection-other  {
-    background-color: rgba(255, 0, 0, 0.315);
-    width:100px;
+    background-color: #1E375A;
+    width:200px;
+    color: white;
+
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -135,9 +134,16 @@ header {
     box-shadow: 7px 10px 10px  rgba(0, 0, 0, 0.205);
  }
 
+ .selection-other:hover, .selection-plant:hover,.selection-fish:hover {
+  transform: scale(1.1);
+  filter: invert(0.1);
+}
+
  .selection-plant {
-    background-color: rgba(0, 0, 243, 0.459);
-    width:100px;
+  color: white;
+
+    background-color: #1E375A;
+    width:200px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -167,7 +173,7 @@ header {
 
   }
   .promo-banner {
-    background-color: red;
+    background-color: #4359ee;
     
     color: white;
     margin-right: -9px;
@@ -321,12 +327,12 @@ header {
 
 .text-style {
     font-size: 15px;
-
+  color:black;
 }
 
 .text-h1 {
     font-size: 25px;
-
+  color: black;
 }
 
 #commande {
@@ -388,7 +394,7 @@ header {
 }
 
 #koi-history{
-  background-color: rgb(49, 49, 49);
+  background-color: #00000064;
   color:white;
   display: flex;
   flex-direction: column;
@@ -416,6 +422,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   gap:400px;
+  color:white;
   background-color: rgba(116, 0, 0, 0);
   width:100%;
   margin-top: -70px;
@@ -596,7 +603,7 @@ header {
   text-decoration:none;
   color:rgba(240, 240, 240, 0.89);
   font-size: 25px;
-
+  color:white;
 }
 
 #conditions {
@@ -604,11 +611,12 @@ header {
   text-decoration:none;
   color:rgba(240, 240, 240, 0.89);
   font-size: 25px;
-
+  color:white;
 }
 
 #conditions:hover {
   color:black;
+  color:white;
 }
 
 
@@ -628,6 +636,7 @@ header {
   position: relative;
   display: inline-block;
   padding: 5px 0;
+  color:white;
 }
 
 .conditions::before,
@@ -635,7 +644,7 @@ header {
   content: '';
   position: absolute;
   height: 2px;
-  background: black;
+  background: rgba(255, 255, 255, 0.651);
   width: 0;
   bottom: 0;
   transition: width 0.4s ease;
@@ -650,7 +659,7 @@ header {
 }
 
 .conditions:hover {
-  color:rgba(0, 0, 0, 0.403);
+  color:rgba(255, 255, 255, 0.505);
 }
 
 .conditions:hover::before,
@@ -710,19 +719,26 @@ header {
 }
 
 .card {
-  box-shadow: 7px 10px 10px  rgba(0, 0, 0, 0.205);
+  box-shadow: 0 0 0.5px 0.5px rgb(153, 153, 153); 
   transition: 0.3s;
   border-radius: 20px;
-  background-color: white;
+  background-color: #1E375A;
+  color: white;
+  border: rgba(255, 255, 255, 0.028) solid 0.1px;
   width: 250px; /* Ajustez en fonction de la largeur désirée */
   margin-bottom: 20px;
   height:400px;
 }
 
+.card:hover {
+  transform: scale(1.02);
+}
+
 .card img {
   width: 100%;
   height: 40%;
-  border-radius:20px ;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   box-shadow: 7px 10px 10px  rgba(0, 0, 0, 0.205);
 }
 
@@ -762,8 +778,10 @@ header {
 
 #lien {
   text-decoration: none;
-  color: black;
-
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
  #label {
