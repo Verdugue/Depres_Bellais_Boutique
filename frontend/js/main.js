@@ -201,16 +201,12 @@ function createCard(item, type) {
                 <img src="${imageUrl}" alt="${title}" class="card-img-top">
             </div>
             <div class="card-body">
-                <div id="left-commande">
-                    <div class="text-commande">
-                        <h5 class="card-title">${title}</h5>
-                        <p><strong>Price:</strong> $${price}</p>
-                    </div>
+                <div class="text-commande">
+                    <h5 class="card-title">${title}</h5>
+                    
                 </div>
                 <div id="right-commande">
-                    <div class="text-commande">
-                        <p class="card-text">${description}</p>
-                    </div>
+                    <p> ${price}€</p>
                 </div>
             </div>
         </a>

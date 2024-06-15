@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 3000;
+const db = require('./database');  // Assurez-vous d'importer la connexion à la base de données
 const poissonRoutes = require('./routes/poisson');
 const plantRoutes = require('./routes/plant');
 const otherRoutes = require('./routes/other');
@@ -9,7 +10,6 @@ const filterRoutes = require('./routes/filter');
 
 app.use(cors());
 app.use(express.json());
-
 
 app.use('/api/filter', filterRoutes);
 app.use('/api/poissons', poissonRoutes);

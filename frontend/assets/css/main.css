@@ -161,15 +161,13 @@ body {
  }
 
   #achat-prop {
-    height: 100em;
+    height: 97em;
     width: 100em;
     display: flex;
     background-color: rgba(128, 128, 128, 0.315);
     border-radius: 20px;
-    justify-content: center;
-    
+    margin-top: 100px;
     flex-direction: column;
-    gap:80px;
 
   }
   .promo-banner {
@@ -728,11 +726,15 @@ body {
   border: rgba(255, 255, 255, 0.028) solid 0.1px;
   width: 250px; /* Ajustez en fonction de la largeur désirée */
   margin-bottom: 20px;
+  margin-top: 20px;
   height:400px;
 }
 
 .card:hover {
   transform: scale(1.02);
+  border:none;
+  box-shadow: none;
+  filter: invert(0.03);
 }
 
 #left-commande {
@@ -746,19 +748,26 @@ body {
 }
 
 .card-body {
-  text-decoration:none ;
-  color:white;
   display: flex;
   flex-direction: column;
-  position: relative;
-  align-items: center;
+  justify-content: space-around;
+  height:200px;
+  width: 100%;
   
+}
+ 
+#right-commande {
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+
+  margin-left: 30px;
 }
 
 
 .card-img-top {
   width:100%;
-  height:180px;
+  height:210px;
 }
 
 

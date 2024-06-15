@@ -1,0 +1,85 @@
+CREATE TABLE user_account (
+    id_user         INT AUTO_INCREMENT,
+    username        VARCHAR(255),
+    mdp             VARCHAR(255),
+    user_creation   DATE,
+    email           VARCHAR(255),
+    last_name       VARCHAR(255),
+    first_name      VARCHAR(255),
+    PRIMARY KEY (id_user)
+);
+
+CREATE TABLE environements (
+    id_environements    INT AUTO_INCREMENT,
+    location            VARCHAR(255),
+    temp_moy            INT,
+    salinity            INT,
+    stream_force        INT,
+    description         VARCHAR(255),
+    PRIMARY KEY (id_environements)
+);
+
+
+
+CREATE TABLE other (
+    id_other        INT AUTO_INCREMENT,
+    species         VARCHAR(255),
+    temp            VARCHAR(255),
+    ph              DECIMAL(3, 1),
+    location        VARCHAR(255),
+    stock           INT,
+    colors          VARCHAR(255),
+    description     TEXT,
+    PRIMARY KEY (id_other)
+);
+
+
+
+CREATE TABLE oceans (
+    id_oceans           INT AUTO_INCREMENT,
+    name                VARCHAR(255),
+    id_environements    INT NOT NULL,
+    PRIMARY KEY (id_oceans),
+    FOREIGN KEY (id_environements) REFERENCES environements(id_environements)
+);
+
+CREATE TABLE panier (
+    id_panier       INT AUTO_INCREMENT,
+    id_user         INT NOT NULL,
+    PRIMARY KEY (id_panier),
+    UNIQUE (id_user),
+    FOREIGN KEY (id_user) REFERENCES user_account(id_user)
+);
+
+CREATE TABLE Animals(
+   id_animals INT,
+   species VARCHAR(50),
+   temp_moy INT,
+   stock INT,
+   location VARCHAR(50),
+   colors VARCHAR(50),
+   price INT,
+   description VARCHAR(50),
+   ph INT,
+   id_panier INT,
+   id_environements INT NOT NULL,
+   PRIMARY KEY(id_animals),
+   FOREIGN KEY(id_panier) REFERENCES Panier(id_panier),
+   FOREIGN KEY(id_environements) REFERENCES Environements(id_environements)
+);
+
+CREATE TABLE plant (
+    id_plant            INT AUTO_INCREMENT,
+    stock               INT,
+    location            VARCHAR(255),
+    description         VARCHAR(255),
+    color               VARCHAR(255),
+    price               INT,
+    plant_name          VARCHAR(255) NOT NULL,
+    ph                  VARCHAR(255) NOT NULL,
+    id_panier           INT,
+    id_environements    INT NOT NULL,
+    PRIMARY KEY (id_plant),
+    FOREIGN KEY (id_panier) REFERENCES panier(id_panier),
+    FOREIGN KEY (id_environements) REFERENCES environements(id_environements)
+);
