@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+</head>
+<body>
+    <a id="BillieElliott" class="person">Person</a>
+    <a id="BobTurner" class="architect classical active">Architect</a>
+    <a id="BonannoPisano" class="architect classical active">Architect</a>
+    <a id="ClariceSterling" class="architect classical">Architect</a>
+    <a id="ClarkLoister" class="architect">Architect</a>
+    <a id="DavidCarretta" class="person">Person</a>
+    <a id="DavidGuetta" class="person">Person</a>
+    <!-- Add more elements as needed -->
+    <script type="module">
+        import { getArchitects, getClassical, getActive, getBonannoPisano } from './get-them-all.js';
+
+        // Test the functions
+        console.log(getArchitects());
+        console.log(getClassical());
+        console.log(getActive());
+        console.log(getBonannoPisano());
+    </script>
+</body>
+</html>
