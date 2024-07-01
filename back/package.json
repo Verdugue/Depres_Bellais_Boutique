@@ -17,19 +17,3 @@
     "nodemon": "^3.1.0"
   }
 }
-CREATE TABLE animals (
-    id_animals          INT PRIMARY KEY,
-    species             VARCHAR(255),
-    temp_moy            VARCHAR(255),
-    stock               INT,
-    location            VARCHAR(255),
-    colors              VARCHAR(255),
-    price               DECIMAL(10, 2),
-    description         TEXT,
-    ph                  VARCHAR(255),
-    id_panier           INT,
-    id_environements    INT,
-    image_path          VARCHAR(255),
-    elevage             TEXT,
-    origine             TEXT
-);
