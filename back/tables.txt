@@ -22,7 +22,7 @@ CREATE TABLE environements (
 
 
 CREATE TABLE other (
-    id_other        INT AUTO_INCREMENT,
+    id_other        INT AUTO_INCREMENT, 
     species         VARCHAR(255),
     temp            VARCHAR(255),
     ph              DECIMAL(3, 1),
